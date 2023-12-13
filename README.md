@@ -4,8 +4,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 
 - [Selector](#selector)
 - [Pseudo Classes](#pseudo-classes)
+- [Pseudo Element](#pseudo-element)
 
-<!-- - [Pseudo Element]() -->
 <!-- - [Fonts]() -->
 <!-- - [Lengths]() -->
 <!-- - [Colors]() -->
@@ -108,4 +108,25 @@ div {}
       - ( even ) 2,4,6,8...
 */
 .of-child li:nth-child(3) {}
+```
+
+## [Pseudo Element](/code/pseudo-element/pseudo-element.html)
+
+Pseudo-elements are added to the selectors, but they do not describe a special state, but allow you to add styles to a specific part of the document.
+
+```CSS
+/* ::first-letter */
+.first-letter::first-letter {}
+
+/* ::first-line */
+.first-line::first-line {}
+
+/* ::selection */
+.selection::selection {}
+
+/* ::before */
+.before::before {}
+
+/* ::after */
+.after::after {}
 ```
