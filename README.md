@@ -22,6 +22,8 @@ This project is to have a record of what i have learned about CSS.
 
 ## _Selector_
 
+Selectors define on which elements a set of CSS rules will be applied.
+
 ```CSS
 /* All elements */
 * {}
@@ -59,6 +61,8 @@ div {}
 ```
 
 ## _[Pseudo Classes](/code/pseudo-classes/pseudo-classes.html)_
+
+A CSS pseudo class is a keyword added to selectors that specifies a special state of the selected element.
 
 ```CSS
 /* Allows you to apply a style when hovering over an element. */
