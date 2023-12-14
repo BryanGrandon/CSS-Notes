@@ -11,8 +11,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Box Model](#box-model)
 - [Position](#position)
 - [Background](#background)
+- [Display](#display)
 
-<!-- - [Display]() -->
 <!-- - [Flex]() -->
 <!-- - [Variables]() -->
 
@@ -336,5 +336,18 @@ The background shorthand CSS property sets all background style properties at on
 
   /* Sets the transparency of the element */
   opacity: 0.5;
+}
+```
+
+## _Display_
+
+The CSS display property specifies whether an element is treated as a block or inline element.
+
+```CSS
+.display {
+  display: inline;
+  display: block;
+  display: inline-block;
+  display: none;
 }
 ```
