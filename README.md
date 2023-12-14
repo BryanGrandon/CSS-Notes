@@ -5,8 +5,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Selector](#selector)
 - [Pseudo Classes](#pseudo-classes)
 - [Pseudo Element](#pseudo-element)
+- [Fonts](#fonts)
 
-<!-- - [Fonts]() -->
 <!-- - [Lengths]() -->
 <!-- - [Colors]() -->
 <!-- - [Box Model]() -->
@@ -133,4 +133,31 @@ Pseudo-elements are added to the selectors, but they do not describe a special s
 
 /* ::after */
 .after::after {}
+```
+
+## _Fonts_
+
+The CSS fonts module defines font-related properties and how font resource are loaded.
+
+```CSS
+p {
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 20px;
+
+  font-weight: bolder;
+
+  font-style: italic;
+
+  text-align: center;
+
+  text-decoration: overline;
+
+  text-transform: capitalize;
+
+  letter-spacing: 5px;
+
+  line-height: 1.4;
+}
+
 ```
