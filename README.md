@@ -6,8 +6,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Pseudo Classes](#pseudo-classes)
 - [Pseudo Element](#pseudo-element)
 - [Fonts](#fonts)
+- [Length](#length)
 
-<!-- - [Lengths]() -->
 <!-- - [Colors]() -->
 <!-- - [Box Model]() -->
 <!-- - [Position]() -->
@@ -142,22 +142,52 @@ The CSS fonts module defines font-related properties and how font resource are l
 ```CSS
 p {
   font-family: "Times New Roman", Times, serif;
-
   font-size: 20px;
-
   font-weight: bolder;
-
   font-style: italic;
-
   text-align: center;
-
   text-decoration: overline;
-
   text-transform: capitalize;
-
   letter-spacing: 5px;
-
   line-height: 1.4;
 }
+```
+
+## _Length_
+
+The length data type consists of a number followed by one of the units measurement.
+
+```CSS
+/* Absolute length units */
+
+.length__inches {
+  size: 10in;
+}
+.length__centimeters {
+  size: 10cm;
+}
+.length__millimeters {
+  size: 100mm;
+}
+.length__points {
+  size: 100pt;
+}
+.length__picas {
+  size: 100pc;
+}
+.length__pixels {
+  size: 100px;
+}
+
+/* Relative length units */
+/*
+    - `em` -> Font-size of the element.
+    - `rem` -> Font size of the root element.
+    - `vw` -> 1% of the viewport's width.
+    - `vh` -> 1% of the viewport's height.
+    - `vmin` -> 1% of the viewport's smaller dimension.
+    - `vmax` -> 1% of the viewport's larger dimension.
+    - `%` -> Percentage relative to the parent element.
+*/
 
 ```
