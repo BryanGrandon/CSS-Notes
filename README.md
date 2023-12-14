@@ -8,9 +8,9 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Fonts](#fonts)
 - [Length](#length)
 - [Colors](#colors)
+- [Box Model](#box-model)
+- [Position](#position)
 
-<!-- - [Box Model]() -->
-<!-- - [Position]() -->
 <!-- - [Background]() -->
 <!-- - [Display]() -->
 <!-- - [Flex]() -->
@@ -275,5 +275,36 @@ Everything in CSS has box around it, and understanding these boxes in key to bei
 }
 .border-sizing__content-box {
   box-sizing: content-box;
+}
+```
+
+## _Position_
+
+The position CSS property sets how an element is positioned in a document.
+
+```CSS
+/* The element is positioned according to the normal document flow. */
+.position__static {
+  position: static;
+}
+
+/* The element is positioned according to the normal flow of the document, and then offset relative to itself, based on the values of top, right, bottom, and left. The offset does not affect the position of any other element. */
+.position__relative {
+  position: relative;
+}
+
+/* An element with position: absolute is removed from the normal document flow. It is automatically positioned at the starting point of its parent element. */
+.position__absolute {
+  position: absolute;
+}
+
+/* Fixed positioning causes an element to be positioned relative to the viewport. You tell it where to position the element, and it stays there while the user scrolls. */
+.position__fixed {
+  position: fixed;
+}
+
+/* Sticky positioning can be considered a hybrid of relative and fixed positioning. */
+.position__sticky {
+  position: sticky;
 }
 ```
