@@ -10,8 +10,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Colors](#colors)
 - [Box Model](#box-model)
 - [Position](#position)
+- [Background](#background)
 
-<!-- - [Background]() -->
 <!-- - [Display]() -->
 <!-- - [Flex]() -->
 <!-- - [Variables]() -->
@@ -306,5 +306,35 @@ The position CSS property sets how an element is positioned in a document.
 /* Sticky positioning can be considered a hybrid of relative and fixed positioning. */
 .position__sticky {
   position: sticky;
+}
+```
+
+## _Background_
+
+The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
+
+```CSS
+.background {
+  background-color: mediumpurple;
+  background-image: url("https://");
+
+  /* Set a different size to the background image */
+  background-size: contain;
+
+  /* Repetition of the background image */
+  background-repeat: no-repeat;
+
+  /* Position of the background image */
+  background-position-x: 30px;
+  background-position-y: 10px;
+
+  /* Background image behavior */
+  background-attachment: scroll;
+
+  /* Background image relented */
+  background-clip: content-box;
+
+  /* Sets the transparency of the element */
+  opacity: 0.5;
 }
 ```
