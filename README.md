@@ -7,8 +7,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Pseudo Element](#pseudo-element)
 - [Fonts](#fonts)
 - [Length](#length)
+- [Colors](#colors)
 
-<!-- - [Colors]() -->
 <!-- - [Box Model]() -->
 <!-- - [Position]() -->
 <!-- - [Background]() -->
@@ -189,5 +189,91 @@ The length data type consists of a number followed by one of the units measureme
     - `vmax` -> 1% of the viewport's larger dimension.
     - `%` -> Percentage relative to the parent element.
 */
+```
 
+## _Colors_
+
+Ways to add colors to website.
+
+```CSS
+.keyword {
+  color: red;
+}
+.hexadecimal {
+  color: #ff0000;
+}
+.rgb {
+  color: rgb(255, 0, 0);
+}
+.hsl {
+  color: hsl(0, 100%, 50%);
+}
+
+.alpha {
+  color: rgba(255, 0, 0, 0.2);
+  color: hsla(0, 100%, 50%, 0.2);
+  color: #ff000033;
+}
+```
+
+## _[Box Model](/code/box-model/box-model.html)_
+
+Everything in CSS has box around it, and understanding these boxes in key to being able to create more complex layouts with CSS, or to align items with other items.
+
+```CSS
+/* padding: top right bottom left */
+.padding {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  padding: 20px;
+}
+/* margin: top right bottom left */
+.margin {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  margin: 20px;
+}
+.width {
+  width: 200px;
+}
+.height {
+  display: inline-block;
+  height: 100px;
+}
+.border__solid {
+  border: 3px solid mediumaquamarine;
+}
+.border__double {
+  border: 3px double mediumorchid;
+}
+.border__dotted {
+  border: 3px dotted mediumpurple;
+}
+.border__dashed {
+  border: 3px dashed mediumseagreen;
+}
+.border__groove {
+  border: 3px groove mediumslateblue;
+}
+.border__ridge {
+  border: 3px ridge mediumspringgreen;
+}
+.border__inset {
+  border: 3px inset mediumturquoise;
+}
+.border__outset {
+  border: 3px outset mediumvioletred;
+}
+.border-sizing__border-box {
+  box-sizing: border-box;
+}
+.border-sizing__content-box {
+  box-sizing: content-box;
+}
 ```
