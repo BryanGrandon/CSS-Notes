@@ -13,8 +13,7 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Background](#background)
 - [Display](#display)
 - [Flex](#flex)
-
-<!-- - [Variables]() -->
+- [Variables](#variables)
 
 ## _Introduction_
 
@@ -389,5 +388,18 @@ The Flexible Box Module, commonly as a one-dimensional layout model, and as a me
 .gap {
   display: flex;
   gap: 30px;
+}
+```
+
+## _Variables_
+
+Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that represent specific values to be reused throughout a document.
+
+```CSS
+:root {
+  --variable-color: #f00;
+}
+.class {
+  color: var(--variable-color);
 }
 ```
