@@ -12,8 +12,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Position](#position)
 - [Background](#background)
 - [Display](#display)
+- [Flex](#flex)
 
-<!-- - [Flex]() -->
 <!-- - [Variables]() -->
 
 ## _Introduction_
@@ -349,5 +349,45 @@ The CSS display property specifies whether an element is treated as a block or i
   display: block;
   display: inline-block;
   display: none;
+}
+```
+
+## _[Flex](/code/flex/flex.html)_
+
+The Flexible Box Module, commonly as a one-dimensional layout model, and as a method that con help distribute the space between items in an interface and improve alignment capabilities.
+
+```CSS
+.flex-direction {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+}
+.justify-content {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: center;
+  justify-content: flex-end;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.align-items {
+  display: flex;
+  align-items: start;
+  align-items: end;
+  align-items: center;
+  align-items: stretch;
+}
+.gap {
+  display: flex;
+  gap: 30px;
 }
 ```
