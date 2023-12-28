@@ -19,6 +19,10 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 
 This project is to have a record of what i have learned about CSS.
 
+### Related websites
+
+- [CSS Tips](https://markodenic.com/css-tips/#css-typing-effect)
+
 ## _Selector_
 
 Selectors define on which elements a set of CSS rules will be applied.
