@@ -7,6 +7,7 @@ The best way to learn something is to put it into practice through projects.
 - [Profile cards](#profile-cards)
 - [Login](#login)
 - [Dark mode](#dark-mode)
+- [Subscription cards](#subscription-cards)
 
 ## _Profile cards_
 
@@ -25,3 +26,9 @@ Login is an account access process that uses more than one method to verify a us
 Dark mode describes an interface setting that applies a dark-colored canvas as a background.
 
 - [Dark mode 1](/projects/dark-mode/dark-mode-1/)
+
+## _Subscription cards_
+
+Subscription plans are a way of showing users the benefits they can have depending on the subscription they wish to pay for.
+
+- [subscription card 1](/projects/subscription-cards/subscription-card-1/)
