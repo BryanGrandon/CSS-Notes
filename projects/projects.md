@@ -18,3 +18,9 @@ Profile cards allow us to display information about participants or members of c
 Login is an account access process that uses more than one method to verify a user's identity.
 
 - [Login 1](/projects/login/login-1/)
+
+## _Dark Mode_
+
+Dark mode describes an interface setting that applies a dark-colored canvas as a background.
+
+- [Dark mode 1](/projects/dark-mode/dark-mode-1/)
