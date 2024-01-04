@@ -6,6 +6,7 @@ The best way to learn something is to put it into practice through projects.
 
 - [Profile cards](#profile-cards)
 - [Login](#login)
+- [Dark mode](#dark-mode)
 
 ## _Profile cards_
 
