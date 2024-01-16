@@ -18,6 +18,7 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Display](#display)
 - [Flex](#flex)
 - [Variables](#variables)
+- [Reset css styles](#reset-css-styles)
 
 ## _Introduction_
 
@@ -409,5 +410,28 @@ Custom properties (sometimes referred to as CSS variables or cascading variables
 }
 .class {
   color: var(--variable-color);
+}
+```
+
+## _Reset css styles_
+
+Reset all default browser styles.
+
+```CSS
+*{
+  box-sizing: border-box;
+  min-width:0;
+}
+
+body{
+  min-height:100dvh;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 ```
