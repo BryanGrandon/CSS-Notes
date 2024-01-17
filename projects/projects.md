@@ -14,6 +14,7 @@ The best way to learn something is to put it into practice through projects.
 Profile cards allow us to display information about participants or members of certain projects.
 
 - [Profile cards 1](/projects/profile-cards/profile-card-1/)
+- [Profile cards 2](/projects/profile-cards/profile-card-2/)
 
 ## _Login_
 
