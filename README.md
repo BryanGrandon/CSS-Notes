@@ -419,6 +419,8 @@ Reset all default browser styles.
 
 ```CSS
 *{
+  margin:0;
+  padding:0;
   box-sizing: border-box;
   min-width:0;
 }
@@ -435,3 +437,7 @@ p {
   text-wrap: pretty;
 }
 ```
+
+Another way to reset the styles is to use a css file
+
+- [File css](/code/reset-css-styles.css)
