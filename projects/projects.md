@@ -34,3 +34,4 @@ Dark mode describes an interface setting that applies a dark-colored canvas as a
 Subscription plans are a way of showing users the benefits they can have depending on the subscription they wish to pay for.
 
 - [subscription card 1](/projects/subscription-cards/subscription-card-1/)
+- [subscription card 2](/projects/subscription-cards/subscription-card-2/)
