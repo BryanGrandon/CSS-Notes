@@ -1,0 +1,77 @@
+.subscription {
+  /* border: 1px solid #000; */
+  width: 16rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px #1f1235;
+}
+
+/* Header */
+
+.subscription__header {
+  padding: 0.6rem;
+  background-image: linear-gradient(160deg, #84fab0 0%, #8fd3f4 100%);
+}
+.subscription__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+}
+
+/* Info */
+
+.subscription__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+/* icon */
+.icon--subscription {
+  font-size: 5rem;
+  color: linear-gradient(160deg, #84fab0 0%, #8fd3f4 100%);
+  color: #84fab0;
+}
+/* text */
+.subscription__text {
+  font-variant: small-caps;
+  color: #1f123580;
+}
+/* price */
+.subscription__price {
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+.subscription__monthly {
+  font-size: 1rem;
+}
+
+/* Button */
+
+.button {
+  border-radius: 1rem;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 1px 1px 4px #1f1235;
+  cursor: pointer;
+}
+.button:hover {
+  background: #8fd3f4;
+  color: #fff;
+}
+.button:active {
+  box-shadow: 1px 1px 4px #1f1235 inset;
+}
+.button--subscription {
+  background-image: linear-gradient(160deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+/* Container */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
