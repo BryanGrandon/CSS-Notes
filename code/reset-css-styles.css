@@ -2,7 +2,7 @@
 :root {
   --black: #393939;
   /* Typography */
-  --type-primary: Helvetica, Arial, sans-serif;
+  --type-primary: system-ui, -apple-system, sans-serif;
   --type-secondary: Verdana;
 }
 
@@ -60,6 +60,7 @@ li {
 /* We set soft anchors */
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 /* We deactivate default styles of the main text labels */
@@ -163,4 +164,5 @@ h4 {
 }
 p {
   text-wrap: pretty;
+  line-height: 1.4;
 }
