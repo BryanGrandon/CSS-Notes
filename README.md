@@ -2,8 +2,6 @@
 
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
-- [Projects](/projects/projects.md)
-
 ## _Table of content_
 
 - [Selector](#selector)
@@ -19,6 +17,7 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Flex](#flex)
 - [Variables](#variables)
 - [Reset css styles](#reset-css-styles)
+- [Projects](#projects)
 
 ## _Introduction_
 
@@ -28,7 +27,9 @@ This project is to have a record of what i have learned about CSS.
 
 - [CSS Tips](https://markodenic.com/css-tips/#css-typing-effect)
 
-## _Selector_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Selector
 
 Selectors define on which elements a set of CSS rules will be applied.
 
@@ -68,7 +69,9 @@ div {}
 [begins-with^="begins"] {}
 ```
 
-## _[Pseudo Classes](/code/pseudo-classes/pseudo-classes.html)_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## [Pseudo Classes](/code/pseudo-classes/pseudo-classes.html)
 
 A CSS pseudo class is a keyword added to selectors that specifies a special state of the selected element.
 
@@ -122,6 +125,8 @@ A CSS pseudo class is a keyword added to selectors that specifies a special stat
 .of-child li:nth-child(3) {}
 ```
 
+[⬆️ Back to top ⬆️](#css-notes)
+
 ## [Pseudo Element](/code/pseudo-element/pseudo-element.html)
 
 Pseudo-elements are added to the selectors, but they do not describe a special state, but allow you to add styles to a specific part of the document.
@@ -143,7 +148,9 @@ Pseudo-elements are added to the selectors, but they do not describe a special s
 .after::after {}
 ```
 
-## _Fonts_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Fonts
 
 The CSS fonts module defines font-related properties and how font resource are loaded.
 
@@ -161,7 +168,9 @@ p {
 }
 ```
 
-## _Length_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Length
 
 The length data type consists of a number followed by one of the units measurement.
 
@@ -199,7 +208,9 @@ The length data type consists of a number followed by one of the units measureme
 */
 ```
 
-## _Colors_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Colors
 
 Ways to add colors to website.
 
@@ -224,7 +235,9 @@ Ways to add colors to website.
 }
 ```
 
-## _[Box Model](/code/box-model/box-model.html)_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## [Box Model](/code/box-model/box-model.html)
 
 Everything in CSS has box around it, and understanding these boxes in key to being able to create more complex layouts with CSS, or to align items with other items.
 
@@ -286,7 +299,9 @@ Everything in CSS has box around it, and understanding these boxes in key to bei
 }
 ```
 
-## _Position_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Position
 
 The position CSS property sets how an element is positioned in a document.
 
@@ -317,7 +332,9 @@ The position CSS property sets how an element is positioned in a document.
 }
 ```
 
-## _Background_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Background
 
 The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
 
@@ -347,7 +364,9 @@ The background shorthand CSS property sets all background style properties at on
 }
 ```
 
-## _Display_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Display
 
 The CSS display property specifies whether an element is treated as a block or inline element.
 
@@ -360,7 +379,9 @@ The CSS display property specifies whether an element is treated as a block or i
 }
 ```
 
-## _[Flex](/code/flex/flex.html)_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## [Flex](/code/flex/flex.html)
 
 The Flexible Box Module, commonly as a one-dimensional layout model, and as a method that con help distribute the space between items in an interface and improve alignment capabilities.
 
@@ -400,7 +421,9 @@ The Flexible Box Module, commonly as a one-dimensional layout model, and as a me
 }
 ```
 
-## _Variables_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Variables
 
 Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that represent specific values to be reused throughout a document.
 
@@ -413,7 +436,9 @@ Custom properties (sometimes referred to as CSS variables or cascading variables
 }
 ```
 
-## _Reset css styles_
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Reset css styles
 
 Reset all default browser styles.
 
@@ -438,6 +463,39 @@ p {
 }
 ```
 
-Another way to reset the styles is to use a css file
+Another way to reset the styles is to use a [css file](/code/reset-css-styles.css)
 
-- [File css](/code/reset-css-styles.css)
+[⬆️ Back to top ⬆️](#css-notes)
+
+## Projects
+
+The best way to learn something is to put it into practice through projects.
+
+### _Profile cards_
+
+Profile cards allow us to display information about participants or members of certain projects.
+
+- [Profile cards 1](/projects/profile-cards/profile-card-1/)
+- [Profile cards 2](/projects/profile-cards/profile-card-2/)
+
+### _Login_
+
+Login is an account access process that uses more than one method to verify a user's identity.
+
+- [Login 1](/projects/login/login-1/)
+- [Login 2](/projects/login/login-2/)
+
+### _Dark Mode_
+
+Dark mode describes an interface setting that applies a dark-colored canvas as a background.
+
+- [Dark mode 1](/projects/dark-mode/dark-mode-1/)
+
+### _Subscription cards_
+
+Subscription plans are a way of showing users the benefits they can have depending on the subscription they wish to pay for.
+
+- [subscription card 1](/projects/subscription-cards/subscription-card-1/)
+- [subscription card 2](/projects/subscription-cards/subscription-card-2/)
+
+[⬆️ Back to top ⬆️](#css-notes)
