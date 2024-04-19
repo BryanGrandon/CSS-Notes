@@ -7,8 +7,8 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 ## _Table of content_
 
 - [Selector](#selector)
-- [Pseudo Classes](#pseudo-classes)
-- [Pseudo Element](#pseudo-element)
+- [Pseudo-classes](#pseudo-classes)
+- [Pseudo-element](#pseudo-element)
 - [Fonts](#fonts)
 - [Length](#length)
 - [Colors](#colors)
@@ -31,159 +31,58 @@ This project is to have a record of what i have learned about CSS.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## Selector
+## [Selector](/code/selector.css)
 
 Selectors define on which elements a set of CSS rules will be applied.
 
-- To select all HTML elements the selector `*`.
-- HTML tags are also selectors in CSS.
-
-### [Class selector](/code/selector/class.css)
-
-The class selector allows us to select several elements using the name assigned in the **class attribute** of the HTML.
-
-```HTML
-<section>
-  <p class="text"></p>
-  <p class="text"></p>
-</section>
-```
-
-To select the class in the CSS use `.` followed by the class name.
-
-```CSS
-.text {}
-```
-
-### ID selector
-
-The id selector allows us to select a specific element since the name assigned in the **id attribute** of the HTML must be unique.
-
-```HTML
-<section>
-  <h2 id="title"></h2>
-  <p></p>
-</section>
-```
-
-To select the id in the CSS use `#` followed by the id name.
-
-```CSS
-#title {}
-```
-
-### [Attribute selector](/code/selector/attribute.css)
-
-Attribute selectors are made to select all elements that correspond to a specific attribute or to a defined attribute value.
-
-```HTML
-<a href="https://www.google.cl/">Google</a>
-```
-
-To select the attribute in the CSS, type the attribute inside `[]`.
-
-```CSS
-[href] {}
-```
+- **Universal selector** allows you to select all HTML elements.
+- **Type selector** allows you to select the HTML tag itself.
+- **Class selector** allows you to select all the elements that have the same name in the class attribute
+- **Id selector** allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.
+- **Attribute selector** allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## [Pseudo Classes](/code/pseudo-classes/pseudo-classes.html)
+## [Pseudo-classes](/code/pseudo-classes.css)
 
 A CSS pseudo class is a keyword added to selectors that specifies a special state of the selected element.
 
-```CSS
-/* Allows you to apply a style when hovering over an element. */
-.hover:hover {}
+- `:hover` Allows you to apply a style when hovering over an element.
+- `:active` Allows to apply a style when the element is activated.
+- `:visited` Styles are applied once the link has been visited by the user.
+- `:link` The styles are applied to the link that has not yet been visited.
 
-/* Allows to apply a style when the element is activated. */
-.active:active {}
-
-/* Styles are applied once the link has been visited by the user. */
-.visited:visited {}
-
-/* The styles are applied to the link that has not yet been visited. */
-.link:link {}
-
-/* Styles are applied to the element that is currently selected and ready to receive actions. */
-.focus:focus {}
-
-/* Styles are applied to any element that has the required attribute set. */
-.required:required {}
-
-/* Styles are applied to any element that is validated. */
-.valid:valid {}
-
-/* Styles are applied to any validated element that does not meet their constraints. */
-.valid:invalid {}
-
-/* Styles are applied to the element when it is disabled. */
-.disabled:disabled {}
-
-/* :first-of-type */
-.of-type li:first-of-type {}
-
-/* :last-of-type */
-.of-type li:last-of-type {}
-
-/* :nth-of-type() */
-.of-type li:nth-of-type(3) {}
-
-/* :first-child */
-.of-child li:first-child {}
-
-/* :last-child */
-.of-child li:last-child {}
-
-/* :nth-child
-      - ( odd ) 1,3,5,7...
-      - ( even ) 2,4,6,8...
-*/
-.of-child li:nth-child(3) {}
-```
+See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## [Pseudo Element](/code/pseudo-element/pseudo-element.html)
+## [Pseudo-element](/code/pseudo-element.css)
 
 Pseudo-elements are added to the selectors, but they do not describe a special state, but allow you to add styles to a specific part of the document.
 
-```CSS
-/* ::first-letter */
-.first-letter::first-letter {}
+- `::after` allows us to add a cosmetic content after the element using the `content` property.
+- `::before` allows us to add a cosmetic content before the element using the `content` property.
+- `::first-letter` Applies styles to the first letter of the content.
+- `::first-line` Apply styles to the first line of content.
+- `::selection` Applies styles to the part of a document that has been highlighted by the user.
+- `::placeholder` represents the temporary text in an `<input>` element or a `<textarea>` element.
 
-/* ::first-line */
-.first-line::first-line {}
-
-/* ::selection */
-.selection::selection {}
-
-/* ::before */
-.before::before {}
-
-/* ::after */
-.after::after {}
-```
+See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## Fonts
+## [Fonts](/code/fonts.css)
 
-The CSS fonts module defines font-related properties and how font resource are loaded.
+CSS Fonts is the CSS module that defines everything related to typographic resources.
 
-```CSS
-p {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-  font-weight: bolder;
-  font-style: italic;
-  text-align: center;
-  text-decoration: overline;
-  text-transform: capitalize;
-  letter-spacing: 5px;
-  line-height: 1.4;
-}
-```
+- `font-family` defines a list of fonts or font families.
+- `font-size` specifies the size of the letter.
+- `font-weight` specifies the weight or thickness of the letter.
+- `font-style` allows you to define the appearance of a font family.
+- `font-variant` select between normal and small-caps aspects.
+- `line-height` set the distance between lines of text.
+
+See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts)
 
 [⬆️ Back to top ⬆️](#css-notes)
 
