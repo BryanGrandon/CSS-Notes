@@ -2,6 +2,8 @@
 
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
+- [Projects](/docs/projects.md)
+
 ## _Table of content_
 
 - [Selector](#selector)
@@ -33,40 +35,55 @@ This project is to have a record of what i have learned about CSS.
 
 Selectors define on which elements a set of CSS rules will be applied.
 
+- To select all HTML elements the selector `*`.
+- HTML tags are also selectors in CSS.
+
+### [Class selector](/code/selector/class.css)
+
+The class selector allows us to select several elements using the name assigned in the **class attribute** of the HTML.
+
+```HTML
+<section>
+  <p class="text"></p>
+  <p class="text"></p>
+</section>
+```
+
+To select the class in the CSS use `.` followed by the class name.
+
 ```CSS
-/* All elements */
-* {}
+.text {}
+```
 
-/* Elements HTML */
-div {}
+### ID selector
 
-/* Attribute Class */
-.class {}
+The id selector allows us to select a specific element since the name assigned in the **id attribute** of the HTML must be unique.
 
-/* Attribute Id */
-#id {}
+```HTML
+<section>
+  <h2 id="title"></h2>
+  <p></p>
+</section>
+```
 
-/* Descendent */
-.parent .child {}
+To select the id in the CSS use `#` followed by the id name.
 
-/* Direct descendent */
-.parent > .child {}
+```CSS
+#title {}
+```
 
-/* Adjacent sibling */
-.child + .sibling {}
+### [Attribute selector](/code/selector/attribute.css)
 
-/* Far sibling */
-.child ~ .sibling {}
+Attribute selectors are made to select all elements that correspond to a specific attribute or to a defined attribute value.
 
-/* Have both classes */
-.class1.class2 {}
+```HTML
+<a href="https://www.google.cl/">Google</a>
+```
 
-/* Attribute */
-[attribute-name] {}
-[exact="value"] {}
-[Has~="value"] {}
-[end-in$="ends in"] {}
-[begins-with^="begins"] {}
+To select the attribute in the CSS, type the attribute inside `[]`.
+
+```CSS
+[href] {}
 ```
 
 [⬆️ Back to top ⬆️](#css-notes)
@@ -464,38 +481,5 @@ p {
 ```
 
 Another way to reset the styles is to use a [css file](/code/reset-css-styles.css)
-
-[⬆️ Back to top ⬆️](#css-notes)
-
-## Projects
-
-The best way to learn something is to put it into practice through projects.
-
-### _Profile cards_
-
-Profile cards allow us to display information about participants or members of certain projects.
-
-- [Profile cards 1](/projects/profile-cards/profile-card-1/)
-- [Profile cards 2](/projects/profile-cards/profile-card-2/)
-
-### _Login_
-
-Login is an account access process that uses more than one method to verify a user's identity.
-
-- [Login 1](/projects/login/login-1/)
-- [Login 2](/projects/login/login-2/)
-
-### _Dark Mode_
-
-Dark mode describes an interface setting that applies a dark-colored canvas as a background.
-
-- [Dark mode 1](/projects/dark-mode/dark-mode-1/)
-
-### _Subscription cards_
-
-Subscription plans are a way of showing users the benefits they can have depending on the subscription they wish to pay for.
-
-- [subscription card 1](/projects/subscription-cards/subscription-card-1/)
-- [subscription card 2](/projects/subscription-cards/subscription-card-2/)
 
 [⬆️ Back to top ⬆️](#css-notes)
