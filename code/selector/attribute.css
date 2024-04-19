@@ -1,0 +1,19 @@
+[attribute-name] {
+  color: blueviolet;
+}
+
+[exact="value"] {
+  color: blueviolet;
+}
+
+[Has~="value"] {
+  color: blueviolet;
+}
+
+[end-in$="ends in"] {
+  color: blueviolet;
+}
+
+[begins-with^="begins"] {
+  color: blueviolet;
+}
