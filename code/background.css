@@ -1,0 +1,54 @@
+.background {
+  background-color: mediumpurple;
+  background-image: url("https://");
+}
+
+/* Background-size */
+
+.background {
+  background-size: auto;
+  background-size: contain;
+  background-size: cover;
+}
+
+/* Background-repeat */
+
+.background {
+  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: round;
+  background-repeat: space;
+}
+
+/* Background-position */
+
+.background {
+  background-position: 0 0;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+
+/* Background-attachment */
+
+.background {
+  background-attachment: fixed;
+  background-attachment: local;
+  background-attachment: scroll;
+}
+
+/* Background-clip */
+
+.background {
+  background-clip: border-box;
+  background-clip: content-box;
+  background-clip: padding-box;
+}
+
+/* Opacity */
+
+.background {
+  opacity: 0.5;
+  opacity: 50%;
+}
