@@ -90,66 +90,53 @@ See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_
 
 The length data type consists of a number followed by one of the units measurement.
 
-```CSS
-/* Absolute length units */
+### _Absolute length units_
 
-.length__inches {
-  size: 10in;
-}
-.length__centimeters {
-  size: 10cm;
-}
-.length__millimeters {
-  size: 100mm;
-}
-.length__points {
-  size: 100pt;
-}
-.length__picas {
-  size: 100pc;
-}
-.length__pixels {
-  size: 100px;
-}
+Absolute units of measurement in CSS refer to units that do not change, those that are the same in all context.
 
-/* Relative length units */
-/*
-    - `em` -> Font-size of the element.
-    - `rem` -> Font size of the root element.
-    - `vw` -> 1% of the viewport's width.
-    - `vh` -> 1% of the viewport's height.
-    - `vmin` -> 1% of the viewport's smaller dimension.
-    - `vmax` -> 1% of the viewport's larger dimension.
-    - `%` -> Percentage relative to the parent element.
-*/
-```
+- Inches: `in`
+- Centimeters: `cm`
+- Picas: `pc`
+- Millimeters: `mm`
+- Points: `pt`
+- Pixels `px`
+- Quarter-millimeters: `q`
+
+### _Relative length units_
+
+The units of measurement in relative CSS depend on the element or factor to which they refer.
+
+- `em`: Font-size of the element.
+- `rem`: Font-size of the root element.
+- `vw`: 1% of the viewport's width.
+- `vh`: 1% of the viewport's height.
+- `%`: Percentage relative to the parent element.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## Colors
+## [Colors](/code/color.css)
 
-Ways to add colors to website.
+Color is an essential part of web design. It can influence the actions visitors take within a page, the way they read your content and, above all, how they feel when navigating your page.
 
-```CSS
-.keyword {
-  color: red;
-}
-.hexadecimal {
-  color: #ff0000;
-}
-.rgb {
-  color: rgb(255, 0, 0);
-}
-.hsl {
-  color: hsl(0, 100%, 50%);
-}
+- Keyword
 
-.alpha {
-  color: rgba(255, 0, 0, 0.2);
-  color: hsla(0, 100%, 50%, 0.2);
-  color: #ff000033;
-}
-```
+  - Colors in HTML are represented by names instead of numbers. Currently 140 color names are available that can be supported by existing browsers.
+
+- Hexadecimal
+
+  - Hexadecimal color codes consist of a # sign and three pairs of characters representing the intensity of the three primary colors (red, green and blue, in that order). The values can range from 00 (which is the lowest intensity) to FF (which is the highest intensity).
+
+- RGB
+
+  - RGB color codes are composed of three numbers separated by commas. Each represents the intensity of the primary colors by an integer on a scale from 0 to 255.
+
+- HSL
+
+  - The main difference between HSL and RGB is that the HSL values do not represent the intensity of each primary color. Instead, the values represent hue, saturation and lightness. Hue is measured on a scale that goes from 0 to 360
+
+- Alpha
+
+  - The alpha parameter allows the color to have transparency. The values range from 0.0 (totally transparent) to 1.0 (totally opaque).
 
 [⬆️ Back to top ⬆️](#css-notes)
 
