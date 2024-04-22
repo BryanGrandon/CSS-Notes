@@ -169,31 +169,14 @@ The position CSS property sets how an element is positioned in a document.
 
 The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
 
-```CSS
-.background {
-  background-color: mediumpurple;
-  background-image: url("https://");
-
-  /* Set a different size to the background image */
-  background-size: contain;
-
-  /* Repetition of the background image */
-  background-repeat: no-repeat;
-
-  /* Position of the background image */
-  background-position-x: 30px;
-  background-position-y: 10px;
-
-  /* Background image behavior */
-  background-attachment: scroll;
-
-  /* Background image relented */
-  background-clip: content-box;
-
-  /* Sets the transparency of the element */
-  opacity: 0.5;
-}
-```
+- `background-color`: Sets the background color of an element.
+- `background-image`: Sets one or more background images on an element.
+- `background-size`: Set a different size to the background image.
+- `background-repeat`; Repetition of the background image.
+- `background-position`; Position of the background image (x, y).
+- `background-attachment`; Background image behavior.
+- `background-clip`; Background image relented.
+- `opacity`: Sets the transparency of the element
 
 [⬆️ Back to top ⬆️](#css-notes)
 
@@ -201,56 +184,22 @@ The background shorthand CSS property sets all background style properties at on
 
 The CSS display property specifies whether an element is treated as a block or inline element.
 
-```CSS
-.display {
-  display: inline;
-  display: block;
-  display: inline-block;
-  display: none;
-}
-```
+- `block`: Makes the behavior of the element like a block.
+- `inline`: The element will be rendered in line with other elements.
+- `inline-block`: The element will have a mixed behavior between the two previous ones.
+- `none`: Hides an element, so it will not take up any space.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## [Flex](/code/flex/flex.html)
+## [Flex](/code/flex.css)
 
 The Flexible Box Module, commonly as a one-dimensional layout model, and as a method that con help distribute the space between items in an interface and improve alignment capabilities.
 
-```CSS
-.flex-direction {
-  display: flex;
-  flex-direction: row;
-  flex-direction: row-reverse;
-  flex-direction: column;
-  flex-direction: column-reverse;
-}
-.flex-wrap {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-wrap: wrap;
-  flex-wrap: wrap-reverse;
-}
-.justify-content {
-  display: flex;
-  justify-content: flex-start;
-  justify-content: center;
-  justify-content: flex-end;
-  justify-content: space-between;
-  justify-content: space-around;
-  justify-content: space-evenly;
-}
-.align-items {
-  display: flex;
-  align-items: start;
-  align-items: end;
-  align-items: center;
-  align-items: stretch;
-}
-.gap {
-  display: flex;
-  gap: 30px;
-}
-```
+- `flex-direction`: The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+- `flex-wrap`: The CSS flex-wrap property specifies whether "child" elements are forced to stay on a single line or can flow on multiple lines.
+- `justify-content`: The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container.
+- `align-items`: The CSS align-items property sets the align-self value on all direct children as a group.
+- `gap`: The gap CSS shorthand property sets the gaps (gutters) between rows and columns.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
