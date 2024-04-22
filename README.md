@@ -140,100 +140,28 @@ Color is an essential part of web design. It can influence the actions visitors 
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## [Box Model](/code/box-model/box-model.html)
+## [Box Model](/code/box-model.css)
 
 Everything in CSS has box around it, and understanding these boxes in key to being able to create more complex layouts with CSS, or to align items with other items.
 
-```CSS
-/* padding: top right bottom left */
-.padding {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-
-  padding: 20px;
-}
-/* margin: top right bottom left */
-.margin {
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-
-  margin: 20px;
-}
-.width {
-  width: 200px;
-}
-.height {
-  display: inline-block;
-  height: 100px;
-}
-.border__solid {
-  border: 3px solid mediumaquamarine;
-}
-.border__double {
-  border: 3px double mediumorchid;
-}
-.border__dotted {
-  border: 3px dotted mediumpurple;
-}
-.border__dashed {
-  border: 3px dashed mediumseagreen;
-}
-.border__groove {
-  border: 3px groove mediumslateblue;
-}
-.border__ridge {
-  border: 3px ridge mediumspringgreen;
-}
-.border__inset {
-  border: 3px inset mediumturquoise;
-}
-.border__outset {
-  border: 3px outset mediumvioletred;
-}
-.border-sizing__border-box {
-  box-sizing: border-box;
-}
-.border-sizing__content-box {
-  box-sizing: content-box;
-}
-```
+- `padding`: Padding represents the amount of inner space an element has.
+- `margin`: The margin is whitespace available surrounding an element.
+- `width`: The width property allows you to set how wide your container will be.
+- `height`: The height CSS property specifies the height of an element.
+- `border`: The border property allows you to define in a single rule all the borders of the selected elements.
+- `box-sizing`: The box-sizing CSS property sets how the total width and height of an element is calculated.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## Position
+## [Position](/code/position.css)
 
 The position CSS property sets how an element is positioned in a document.
 
-```CSS
-/* The element is positioned according to the normal document flow. */
-.position__static {
-  position: static;
-}
-
-/* The element is positioned according to the normal flow of the document, and then offset relative to itself, based on the values of top, right, bottom, and left. The offset does not affect the position of any other element. */
-.position__relative {
-  position: relative;
-}
-
-/* An element with position: absolute is removed from the normal document flow. It is automatically positioned at the starting point of its parent element. */
-.position__absolute {
-  position: absolute;
-}
-
-/* Fixed positioning causes an element to be positioned relative to the viewport. You tell it where to position the element, and it stays there while the user scrolls. */
-.position__fixed {
-  position: fixed;
-}
-
-/* Sticky positioning can be considered a hybrid of relative and fixed positioning. */
-.position__sticky {
-  position: sticky;
-}
-```
+- `static`: The element is positioned according to the normal document flow
+- `relative`: The element is positioned according to the normal flow of the document, and then offset relative to itself, based on the values of top, right, bottom, and left. The offset does not affect the position of any other element.
+- `absolute`: An element with position: absolute is removed from the normal document flow. It is automatically positioned at the starting point of its parent element.
+- `fixed`: Fixed positioning causes an element to be positioned relative to the viewport. You tell it where to position the element, and it stays there while the user scrolls.
+- `sticky`: Sticky positioning can be considered a hybrid of relative and fixed positioning.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
