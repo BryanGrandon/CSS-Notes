@@ -2,6 +2,7 @@
 
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
+- [CSS Architecture](/docs/css-architecture.md)
 - [Projects](/docs/projects.md)
 
 ## _Table of content_
@@ -19,7 +20,6 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Flex](#flex)
 - [Variables](#variables)
 - [Reset css styles](#reset-css-styles)
-- [Projects](#projects)
 
 ## _Introduction_
 
@@ -165,7 +165,7 @@ The position CSS property sets how an element is positioned in a document.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
-## Background
+## [Background](/code/background.css)
 
 The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
 
