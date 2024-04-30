@@ -33,11 +33,13 @@ This project is to have a record of what i have learned about CSS.
 
 Selectors define on which elements a set of CSS rules will be applied.
 
-- **Universal selector** (`*`) allows you to select all HTML elements.
-- **Type selector** (`html`) allows you to select the HTML tag itself.
-- **Class selector** (`.class`) allows you to select all the elements that have the same name in the class attribute
-- **Id selector** (`#id`) allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.
-- **Attribute selector** (`[attr]`) allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
+| Selector | Name               | Its function                                                                                                  |
+| -------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `*`      | Universal selector | allows you to select all HTML elements                                                                        |
+| `html`   | Type selector      | allows you to select the HTML tag itself.                                                                     |
+| `.`      | Class selector     | allows you to select all the elements that have the same name in the class attribute                          |
+| `#`      | Id selector        | allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.     |
+| `[attr]` | Attribute selector | allow you to select all the elements that correspond to a specific attribute or to a defined attribute value. |
 
 [⬆️ Back to top ⬆️](#css-notes)
 
