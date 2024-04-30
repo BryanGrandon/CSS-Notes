@@ -21,11 +21,9 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Variables](#variables)
 - [Reset css styles](#reset-css-styles)
 
-## _Introduction_
+## Introduction
 
 This project is to have a record of what i have learned about CSS.
-
-### Related websites
 
 - [CSS Tips](https://markodenic.com/css-tips/#css-typing-effect)
 
@@ -35,11 +33,11 @@ This project is to have a record of what i have learned about CSS.
 
 Selectors define on which elements a set of CSS rules will be applied.
 
-- **Universal selector** allows you to select all HTML elements.
-- **Type selector** allows you to select the HTML tag itself.
-- **Class selector** allows you to select all the elements that have the same name in the class attribute
-- **Id selector** allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.
-- **Attribute selector** allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
+- **Universal selector** (`*`) allows you to select all HTML elements.
+- **Type selector** (`html`) allows you to select the HTML tag itself.
+- **Class selector** (`.class`) allows you to select all the elements that have the same name in the class attribute
+- **Id selector** (`#id`) allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.
+- **Attribute selector** (`[attr]`) allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
 
 [⬆️ Back to top ⬆️](#css-notes)
 
@@ -118,25 +116,13 @@ The units of measurement in relative CSS depend on the element or factor to whic
 
 Color is an essential part of web design. It can influence the actions visitors take within a page, the way they read your content and, above all, how they feel when navigating your page.
 
-- Keyword
-
-  - Colors in HTML are represented by names instead of numbers. Currently 140 color names are available that can be supported by existing browsers.
-
-- Hexadecimal
-
-  - Hexadecimal color codes consist of a # sign and three pairs of characters representing the intensity of the three primary colors (red, green and blue, in that order). The values can range from 00 (which is the lowest intensity) to FF (which is the highest intensity).
-
-- RGB
-
-  - RGB color codes are composed of three numbers separated by commas. Each represents the intensity of the primary colors by an integer on a scale from 0 to 255.
-
-- HSL
-
-  - The main difference between HSL and RGB is that the HSL values do not represent the intensity of each primary color. Instead, the values represent hue, saturation and lightness. Hue is measured on a scale that goes from 0 to 360
-
-- Alpha
-
-  - The alpha parameter allows the color to have transparency. The values range from 0.0 (totally transparent) to 1.0 (totally opaque).
+| Representing colors | Description                                                                                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Keyword             | Colors in HTML are represented by names instead of numbers. Currently 140 color names are available that can be supported by existing browsers.                                         |
+| Hexadecimal         | Hexadecimal color codes consist of a # sign and three pairs of characters representing the intensity of the three primary colors (red, green and blue). Values can range from 00 to FF. |
+| RGB                 | RGB color codes are composed of three numbers separated by commas. Each represents the intensity of the primary colors by an integer on a scale from 0 to 255.                          |
+| HSL                 | The main difference between HSL and RGB is that the values represent hue, saturation and lightness. Hue is measured on a scale that ranges from 0 to 360                                |
+| Alpha               | The alpha parameter allows the color to have transparency. The values range from 0.0 (totally transparent) to 1.0 (totally opaque).                                                     |
 
 [⬆️ Back to top ⬆️](#css-notes)
 
