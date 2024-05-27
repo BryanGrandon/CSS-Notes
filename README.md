@@ -3,9 +3,10 @@
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
 - [CSS Architecture](/docs/css-architecture.md)
+- [CSS Preprocessor]
 - [Projects](/docs/projects.md)
 
-## _Table of content_
+## Table of content
 
 - [Selector](#selector)
 - [Pseudo-classes](#pseudo-classes)
@@ -33,13 +34,13 @@ This project is to have a record of what i have learned about CSS.
 
 Selectors define on which elements a set of CSS rules will be applied.
 
-| Selector | Name               | Its function                                                                                                  |
-| -------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| `*`      | Universal selector | allows you to select all HTML elements                                                                        |
-| `html`   | Type selector      | allows you to select the HTML tag itself.                                                                     |
-| `.`      | Class selector     | allows you to select all the elements that have the same name in the class attribute                          |
-| `#`      | Id selector        | allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.     |
-| `[attr]` | Attribute selector | allow you to select all the elements that correspond to a specific attribute or to a defined attribute value. |
+| Selector  | Its function                                                                                                                     |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Universal | Universal selector allows you to select all HTML elements                                                                        |
+| Type      | Type selector allows you to select the HTML tag itself.                                                                          |
+| Class     | Class selector allows you to select all the elements that have the same name in the class attribute                              |
+| Id        | Id selector allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.            |
+| Attribute | Attribute selector allow you to select all the elements that correspond to a specific attribute or to a defined attribute value. |
 
 [⬆️ Back to top ⬆️](#css-notes)
 
