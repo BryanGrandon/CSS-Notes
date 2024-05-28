@@ -1,0 +1,18 @@
+// <section class="box">
+//   <button class="box__btn"></button>
+// </section>
+
+.box {
+  font-family: cursive;
+  &:hover {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__btn {
+    color: #1f1235;
+
+    &:hover {
+      color: red;
+    }
+  }
+}

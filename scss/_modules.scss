@@ -1,0 +1,5 @@
+@use "_mixins";
+
+div {
+  @include customized-box($fund: #ccc);
+}

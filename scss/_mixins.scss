@@ -1,0 +1,21 @@
+@mixin customized-box($color: white) {
+  white: 300px;
+  height: 100px;
+  background-color: $color;
+  border: 1px solid #1f1235;
+}
+
+.box {
+  @include customized-box($color: #770af4);
+}
+
+@mixin flexbox($direction, $wrap, $just, $align) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $just;
+  align-items: $align;
+}
+
+.flex {
+  @include flexbox(column, wrap, space-evenly, center);
+}
