@@ -11,9 +11,9 @@ Consists of managing CSS code with a set of rules and patterns to facilitate its
 
 BEM is a CSS naming and code structure methodology that provides a way to write CSS class names.
 
-- **Block**: It is the independent part in our HTML, it does not need other elements to exist.
-- **Element**: An element will always be inside a block, because it is part of it and is dependent on it to exist.
-- **Modifier**: Modifiers are used on elements or blocks, they are used to represent a different characteristic that the modifier or element will have.
+- Block: It is the independent part in our HTML, it does not need other elements to exist.
+- Element: An element will always be inside a block, because it is part of it and is dependent on it to exist.
+- Modifier: Modifiers are used on elements or blocks, they are used to represent a different characteristic that the modifier or element will have.
 
 ```html
 <section class="block">
@@ -35,28 +35,28 @@ The ITCSS architecture tells us that the organization of CSS code should be appr
 
 - Settings:
 
-  - In this folder we will place the code of declaration of variables or global configurations of our project. The base font size, color palettes, etc.
+  In this folder we will place the code of declaration of variables or global configurations of our project. The base font size, color palettes, etc.
 
 - Tools:
 
-  - In this folder we will have the mixins and functions, which can be used by the following layers.
+  In this folder we will have the mixins and functions, which can be used by the following layers.
 
 - Generic:
 
-  - At this point we will place generic code base for the whole project, typically the CSS reset you are using
+  At this point we will place generic code base for the whole project, typically the CSS reset you are using
 
 - Elements:
 
-  - Will be used to place the CSS that affects the HTML elements. We are not going to place more than styling for tags.
+  Will be used to place the CSS that affects the HTML elements. We are not going to place more than styling for tags.
 
 - Objects:
 
-  - Is where the classes for the page structure would go. In this folder is the place to place aspects related to the layout, basic mediaqueries to accommodate the parts of our template to different screen dimensions.
+  Is where the classes for the page structure would go. In this folder is the place to place aspects related to the layout, basic media queries to accommodate the parts of our template to different screen dimensions.
 
 - Components:
 
-  - The components are the independent sections of our website. Here we can find the typical .header or .card that are composed of a set of elements and objects.
+  The components are the independent sections of our website. Here we can find the typical .header or .card that are composed of a set of elements and objects.
 
 - Trumps:
 
-  - Finally we have the Trumps layer, the layer that "triumphs" over the rest. In this layer we can overwrite everything, and it is where surely all our `!important` are. It is here where our utility classes are
+  Finally we have the Trumps layer, the layer that "triumphs" over the rest. In this layer we can overwrite everything, and it is where surely all our `!important` are. It is here where our utility classes are

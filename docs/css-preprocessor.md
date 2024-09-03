@@ -2,10 +2,6 @@
 
 These are scripting languages that extend the default capabilities of CSS.
 
-## Table of content
-
-- [Sass](#sass)
-
 ## Sass
 
 SASS is a CSS preprocessor compatible with all versions of CSS.
