@@ -11,27 +11,17 @@ Consists of managing CSS code with a set of rules and patterns to facilitate its
 
 BEM is a CSS naming and code structure methodology that provides a way to write CSS class names.
 
-- Block: It is the independent part in our HTML, it does not need other elements to exist.
-- Element: An element will always be inside a block, because it is part of it and is dependent on it to exist.
-- Modifier: Modifiers are used on elements or blocks, they are used to represent a different characteristic that the modifier or element will have.
-
-```html
-<section class="block">
-  <div class="block__element"></div>
-  <div class="block__element"></div>
-  <div class="block__element block__element--modifier"></div>
-</section>
-```
+- The Block is the independent part in our HTML, it does not need other elements to exist.
+- An element will always be inside a block, because it is part of it and is dependent on it to exist.
+- Modifiers are used in elements or blocks to represent a different characteristic that the modifier or element will have.
 
 <img width="600px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--OkBgfgPx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/yc0hv58in4eyxjj7qlcg.png">
-
-[⬆️ Back to top ⬆️](#block-element-modifier-bem)
 
 ## Inverted Triangle CSS
 
 The ITCSS architecture tells us that the organization of CSS code should be approached on the basis of an inverted triangle, according to specificity. This means that the most general and basic style rules are added first, and specific rules that override behavior such as utility classes are added last.
 
-<img width="600px" alt="IT-CSS" src="https://res.cloudinary.com/practicaldev/image/fetch/s--fdaiXnMZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6k6a8kb14u40uns2cfks.png">
+<img width="600px" alt="IT-CSS" src="https://res.cloudinary.com/practicaldev/image/fetch/s--vMb61lEd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/x1w4vpq08es26dwok6pn.png">
 
 - Settings:
 

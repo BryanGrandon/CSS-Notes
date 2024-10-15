@@ -1,13 +1,9 @@
-// Variable ( $Name: value; )
+// Variable ( $variable-name: value; )
 
-$color-main: #ccc;
-$color-second: #770af4;
-
-// Set variables
+$main: #ccc;
 
 body {
-  background: $color-main;
-  color: $color-second;
+  background: $main;
 }
 
 // Array of variables
@@ -16,12 +12,7 @@ $colors: (
   "white": #fff,
   "purple": #770af4,
 );
-$fonts: (
-  "title": "arial",
-  "normal": "system-ui",
-);
 
 .header {
-  color: map-get($map: $color-main, $key: "purple");
-  font-family: map-get($fonts, "title");
+  color: map-get($colors, "purple");
 }

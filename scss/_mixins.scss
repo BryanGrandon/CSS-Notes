@@ -1,13 +1,8 @@
-@mixin customized-box($color: white) {
-  white: 300px;
-  height: 100px;
-  background-color: $color;
-  border: 1px solid #1f1235;
-}
-
-.box {
-  @include customized-box($color: #770af4);
-}
+// @mixin name {
+//   property: value;
+//   property: value;
+//   ...
+// }
 
 @mixin flexbox($direction, $wrap, $just, $align) {
   display: flex;

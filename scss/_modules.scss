@@ -1,5 +1,5 @@
-@use "_mixins";
+@use "_mixins" as *;
 
 div {
-  @include customized-box($fund: #ccc);
+  @include flexbox(column, nowrap, normal, normal);
 }

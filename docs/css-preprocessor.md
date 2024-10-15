@@ -1,10 +1,14 @@
 # CSS Preprocessor
 
-These are scripting languages that extend the default capabilities of CSS.
+CSS preprocessors make it easy to automate repetitive tasks, reduce the number of errors and code bloat, create reusable code snippets, and ensure backward compatibility.
 
-## Sass
+## [Sass](https://sass-lang.com/)
 
-SASS is a CSS preprocessor compatible with all versions of CSS.
+SASS is a CSS preprocessor compatible with all versions of CSS. It is therefore a tool used by web developers to translate non-standard stylesheet code into standard CSS code, readable by most browsers.
+
+```bash
+npm install -g sass
+```
 
 - [Variables](/scss/_variables.scss)
 - [Nesting](/scss/_nesting.scss)
@@ -12,16 +16,14 @@ SASS is a CSS preprocessor compatible with all versions of CSS.
 - [Operator](/scss/_operator.scss)
 - [Modules](/scss/_modules.scss)
 
-### Install
+### Folder structure
 
-With Node.js, you can also install Sass using npm by running
+![sass folder](../assets/folder-structure-sass.png)
 
-```bash
-npm install -g sass
-```
+- 📂 base/: It contains the basic styles, including normalization, typography and base styles.
 
-Compiling our SASS code.
+- 📂 layout/: It includes the styles for the main structural sections such as the header, footer, among others.
 
-```bash
-npm run sass input.scss output.css
-```
+- 📂 utilities/: It hosts helpers such as variables, functions and mixins that make writing CSS easier.
+
+- 📄main.scss: It imports all partial files and is the entry point for the compilation.
