@@ -1,5 +1,0 @@
-@use "_mixins" as *;
-
-div {
-  @include flexbox(column, nowrap, normal, normal);
-}
