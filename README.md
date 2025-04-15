@@ -4,6 +4,7 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 
 - [CSS Architecture](/docs/css-architecture.md)
 - [Sass](/docs/sass.md)
+- [Tailwind CSS](/docs/tailwind-css.md)
 
 ## Table of content
 
