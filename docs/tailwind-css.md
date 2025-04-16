@@ -9,6 +9,9 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 - [Typography](#typography)
 - [Sizing](#sizing)
 - [Backgrounds](#backgrounds)
+- [Flex box](#flex-box)
+- [Grid](#grid)
+- [Box-alignment](#box-alignment)
 
 ## [Installation](https://tailwindcss.com/docs/installation/using-vite)
 
@@ -204,7 +207,7 @@ Sets the minimum width of an element. `min-w-{width}`
 
 ### Max-width
 
-Sets the maxiumum width of an element. `max-w-{width}`
+Sets the maximum width of an element. `max-w-{width}`
 
 | Width                  | CSS               |
 | ---------------------- | ----------------- |
@@ -261,7 +264,7 @@ Sets the minimum width of an element. `min-h-{width}`
 
 ### Max-height
 
-Sets the maxiumum height of an element. `max-h-{height}`
+Sets the maximum height of an element. `max-h-{height}`
 
 | Height   | CSS                  |
 | -------- | -------------------- |
@@ -354,5 +357,308 @@ Sets the background color gradients and where to stop. `from-{color}`, `to-{colo
 ```html
 <div class="from-blue-600 to-red-600"></div>
 ```
+
+## Flex box
+
+### Display
+
+Sets element to be a flex container.
+
+| display       | CSS                   |
+| ------------- | --------------------- |
+| `flex`        | display: flex;        |
+| `inline-flex` | display: inline-flex; |
+
+```html
+<p class="flex">Text</p>
+```
+
+### Flex-direction
+
+Sets direction of flex items. `flex-{direction}`
+
+| direction     | CSS                             |
+| ------------- | ------------------------------- |
+| `row`         | flex-direction: row;            |
+| `row-reverse` | flex-direction: row-reverse;    |
+| `col`         | flex-direction: column;         |
+| `col-reverse` | flex-direction: column-reverse; |
+
+```html
+<p class="flex flex-col">Text</p>
+```
+
+### Flex-wrap
+
+Creates how flex items wrap. `flex-{wrap}`
+
+| Wrap           | CSS                      |
+| -------------- | ------------------------ |
+| `wrap`         | flex-wrap: wrap;         |
+| `wrap-reverse` | flex-wrap: wrap-reverse; |
+| `no-wrap`      | flex-wrap: nowrap;       |
+
+```html
+<p class="flex flex-row flex-no-wrap">Text</p>
+```
+
+## Grid
+
+### Display
+
+Sets element to be a grid container.
+
+| Grid          | CSS                   |
+| ------------- | --------------------- |
+| `grid`        | display: grid;        |
+| `inline-grid` | display: inline-grid; |
+
+```html
+<p class="grid">Text</p>
+```
+
+### Grid-template-columns
+
+Defines columns for grid layout. `grid-cols-{columns}`
+
+| Columns | CSS                                                 |
+| ------- | --------------------------------------------------- |
+| `1`     | grid-template-columns: repeat(1, minmax(0, 1fr));   |
+| `2`     | grid-template-columns: repeat(2, minmax(0, 1fr));   |
+| `3`     | grid-template-columns: repeat(3, minmax(0, 1fr));   |
+| `...`   | grid-template-columns: repeat(..., minmax(0, 1fr)); |
+| `12`    | grid-template-columns: repeat(12, minmax(0, 1fr));  |
+| `none`  | grid-template-columns: none;                        |
+
+```html
+<div class="grid grid-cols-3"></div>
+```
+
+### Grid-template-rows
+
+Defines rows for grid layout. `grid-rows-{type}`
+
+| type   | CSS                                              |
+| ------ | ------------------------------------------------ |
+| `1`    | grid-template-rows: repeat(1, minmax(0, 1fr));   |
+| `2`    | grid-template-rows: repeat(2, minmax(0, 1fr));   |
+| `3`    | grid-template-rows: repeat(3, minmax(0, 1fr));   |
+| `...`  | grid-template-rows: repeat(..., minmax(0, 1fr)); |
+| `6`    | grid-template-rows: repeat(12, minmax(0, 1fr));  |
+| `none` | grid-template-rows: none;                        |
+
+### Grid-column, Grid-rows - start/end
+
+Sets a grid item size and location within the grid column. `col-{type}`
+
+Sets a grid item size and location within the grid row. `row-{type}`
+
+| type         | CSS                                      |
+| ------------ | ---------------------------------------- |
+| `auto`       | grid-{column, row}: auto;                |
+| `span-1`     | grid-{column, row}: span 1 / span 1;     |
+| `span-2`     | grid-{column, row}: span 2 / span 2;     |
+| `span-3`     | grid-{column, row}: span 3 / span 3;     |
+| `span-...`   | grid-{column, row}: span ... / span ...; |
+| `span-12`    | grid-{column, row}: span 12 / span 12;   |
+| `span-full`  | grid-{column, row}: 1 / -1;              |
+| `start-1`    | grid-{column, row}-start: 1;             |
+| `start-2`    | grid-{column, row}-start: 2;             |
+| `start-3`    | grid-{column, row}-start: 3;             |
+| `start-...`  | grid-{column, row}-start: ...;           |
+| `start-12`   | grid-{column, row}-start: 12;            |
+| `start-auto` | grid-{column, row}-start: auto;          |
+| `end-1`      | grid-{column, row}-end: 1;               |
+| `end-2`      | grid-{column, row}-end: 2;               |
+| `end-3`      | grid-{column, row}-end: 3;               |
+| `end-...`    | grid-{column, row}-end: ...;             |
+| `end-13`     | grid-{column, row}-end: 13;              |
+| `end-auto`   | grid-{column, row}-end: auto;            |
+
+```html
+<p class="col-start-1 col-end-3">Col</p>
+<p class="row-start-1 row-end-3">Col</p>
+```
+
+### Grid-auto-flow
+
+Controls the auto placement of grid elements. `grid-flow-{direction}`
+
+| Direction      | CSS                           |
+| -------------- | ----------------------------- |
+| `row`          | grid-auto-flow: row;          |
+| `column`       | grid-auto-flow: column;       |
+| `row-dense`    | grid-auto-flow: row dense;    |
+| `column-dense` | grid-auto-flow: column dense; |
+
+### Grid-auto-columns, Grid-auto-rows
+
+Controls the size of auto-generated (implicit) grid columns. `auto-cols-{type}`
+Controls the size of auto-generated (implicit) grid rows. `auto-rows-{type}`
+
+| type   | CSS                                        |
+| ------ | ------------------------------------------ |
+| `auto` | grid-auto-{columns, rows}: auto;           |
+| `min`  | grid-auto-{columns, rows}: min-content;    |
+| `max`  | grid-auto-{columns, rows}: max-content;    |
+| `fr`   | grid-auto-{columns, rows}: minmax(0, 1fr); |
+
+### Gap
+
+Sets the gaps (gutters) between rows and columns. `gap-{type}`
+
+| type  | CSS                  |
+| ----- | -------------------- |
+| `0`   | gap: 0px;            |
+| `1`   | gap: 0.25rem;        |
+| `2`   | gap: 0.5rem;         |
+| `3`   | gap: 0.75rem;        |
+| `4`   | gap: 1rem;           |
+| `...` | gap: ...;            |
+| `x-0` | column-gap: 0px;     |
+| `x-1` | column-gap: o.25rem; |
+| `x-2` | column-gap: 0.5rem;  |
+| `x-3` | column-gap: 0.75rem; |
+| `x-4` | column-gap: 0.1rem;  |
+| `...` | column-gap: ...;     |
+| `y-0` | row-gap: 0px;        |
+| `y-1` | row-gap: 0.25rem;    |
+| `y-2` | row-gap: 0.5rem;     |
+| `y-3` | row-gap: 0.75rem;    |
+| `y-4` | row-gap: 1rem;       |
+| `...` | row-gap: ...;        |
+
+```html
+<div class="grid gap-4">
+  <p>1</p>
+  <p>2</p>
+</div>
+```
+
+## Box Alignment
+
+### Justify-content
+
+Controls how flex items are positioned along container's main axis. `justify-{type}`
+
+| Type      | CSS                             |
+| --------- | ------------------------------- |
+| `start`   | justify-content: flex-start;    |
+| `end`     | justify-content: flex-end;      |
+| `center`  | justify-content: center;        |
+| `between` | justify-content: space-between; |
+| `around`  | justify-content: space-around;  |
+| `evenly`  | justify-content: space-evenly;  |
+
+### Justify-items
+
+Controls default alignment for items on the inline axis for grids. `justify-items-{type}`
+
+| Type      | CSS                     |
+| --------- | ----------------------- |
+| `start`   | justify-items: start;   |
+| `end`     | justify-items: end;     |
+| `center`  | justify-items: center;  |
+| `stretch` | justify-items: stretch; |
+
+### Justify-self
+
+Controls element alignment on the inline axis for a grid item. `justify-self-{type}`
+
+| Type      | CSS                    |
+| --------- | ---------------------- |
+| `auto`    | justify-self: auto;    |
+| `start`   | justify-self: start;   |
+| `end`     | justify-self: end;     |
+| `center`  | justify-self: center;  |
+| `stretch` | justify-self: stretch; |
+
+### Align-content
+
+Controls how lines are positioned in multi-line flex containers. `content-{type}`
+
+| Type      | CSS                           |
+| --------- | ----------------------------- |
+| `start`   | align-content: flex-start;    |
+| `center`  | align-content: center;        |
+| `end`     | align-content: flex-end;      |
+| `between` | align-content: space-between; |
+| `around`  | align-content: space-around;  |
+| `evenly`  | align-content: space-evenly;  |
+
+### Align-items
+
+Sets flex items position along a contrainer's cross axis. `items-{type}`
+
+| Type       | CSS                      |
+| ---------- | ------------------------ |
+| `stretch`  | align-items: stretch;    |
+| `start`    | align-items: flex-start; |
+| `end`      | align-items: flex-end;   |
+| `center`   | align-items: center;     |
+| `baseline` | align-items: baseline;   |
+
+### Align-self
+
+Controls how an individual flex item is positioned along container's cross axis. `self-{type}`
+
+| Type       | CSS                     |
+| ---------- | ----------------------- |
+| `auto`     | align-self: auto;       |
+| `start`    | align-self: flex-start; |
+| `end`      | align-self: flex-end;   |
+| `center`   | align-self: center;     |
+| `stretch`  | align-self: stretch;    |
+| `baseline` | align-self: baseline;   |
+
+### Padding
+
+Controls padding in 0.25rem increments. `p-{type}`
+
+| Type  | CSS               |
+| ----- | ----------------- |
+| `0`   | padding: 0px;     |
+| `1`   | padding: 0.25rem; |
+| `2`   | padding: 0.5rem;  |
+| `3`   | padding: 0.75rem; |
+| `4`   | padding: 1rem;    |
+| `...` | padding: ...;     |
+
+padding left\right `px-{type}`
+
+padding top\bottom `py-{type}`
+
+padding top `pt-{type}`
+
+padding bottom `pb-{type}`
+
+padding left `pl-{type}`
+
+padding right `pr-{type}`
+
+### Margin
+
+Controls margin (and negative margin) in 0.25rem increments. `m-{type}` `-m-{type}`
+
+| Type  | CSS              |
+| ----- | ---------------- |
+| `0`   | margin: 0px;     |
+| `1`   | margin: 0.25rem; |
+| `2`   | margin: 0.5rem;  |
+| `3`   | margin: 0.75rem; |
+| `4`   | margin: 1rem;    |
+| `...` | margin: ...;     |
+
+margin left\right `mx-{type}`, `-mx-{type}`
+
+margin top\bottom `my-{type}`, `-my-{type}`
+
+margin top `mt-{type}`, `-mt-{type}`
+
+margin bottom `mb-{type}`, `-mb-{type}`
+
+margin left `ml-{type}`, `-ml-{type}`
+
+margin right `mr-{type}`, `-mr-{type}`
 
 [🡨 Back](../README.md)
