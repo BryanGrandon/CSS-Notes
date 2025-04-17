@@ -13,6 +13,12 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 - [Flex box](#flex-box)
 - [Grid](#grid)
 - [Box-alignment](#box-alignment)
+- [Border](#border)
+- [Transitions and Animation](#transitions-and-animation)
+- [Transforms](#transforms)
+- [Interactivity](#interactivity)
+- [Filter](#filter)
+- [Effects](#effects)
 
 ## [Installation](https://tailwindcss.com/docs/installation/using-vite)
 
@@ -768,5 +774,368 @@ margin bottom `mb-{type}`, `-mb-{type}`
 margin left `ml-{type}`, `-ml-{type}`
 
 margin right `mr-{type}`, `-mr-{type}`
+
+## Border
+
+### border-radius
+
+Sets border radius. `rounded-{type}`
+
+| Type   | CSS                      |
+| ------ | ------------------------ |
+| `none` | border-radius: 0px;      |
+| `sm`   | border-radius: 0.125rem; |
+| ` `    | border-radius: 0.25rem;  |
+| `md`   | border-radius: 0.375rem; |
+| `lg`   | border-radius: 0.5rem;   |
+| `xl`   | border-radius: 0.75rem;  |
+| `2xl`  | border-radius: 1rem;     |
+| `3xl`  | border-radius: 1.5rem;   |
+| `full` | border-radius: 9999px;   |
+
+`rounded-t-{type}` : border-top-left-radius: ...; border-top-right-radius: ...;
+
+`rounded-r-{type}` : border-top-right-radius: ...; border-bottom-right-radius: ...;
+
+`rounded-b-{type}` : border-bottom-right-radius: ...; border-bottom-left-radius: ...;
+
+`rounded-l-{type}` : border-top-left-radius: ...; border-bottom-left-radius: ...;
+
+`rounded-tl-{type}` : border-top-left-radius: ...;
+
+`rounded-tr-{type}` : border-top-right-radius: ...;
+
+`rounded-br-{type}` : border-bottom-right-radius: ...;
+
+`rounded-bl-{type}` : border-bottom-left-radius: ...;
+
+### Border-width
+
+Sets border width in increments of 1px.
+
+| Class             | CSS                       |
+| ----------------- | ------------------------- |
+| `border`          | border-width: 1px;        |
+| `border-0`        | border-width: 0px;        |
+| `border-2`        | border-width: 2px;        |
+| `border-4`        | border-width: 4px;        |
+| `border-8`        | border-width: 8px;        |
+| `border-t-{size}` | border-top-width: ...;    |
+| `border-r-{size}` | border-right-width: ...;  |
+| `border-b-{size}` | border-bottom-width: ...; |
+| `border-l-{size}` | border-left-width: ...;   |
+
+### Border-style
+
+Sets border style. `border-{style}`
+
+| style    | CSS                   |
+| -------- | --------------------- |
+| `solid`  | border-style: solid;  |
+| `dashed` | border-style: dashed; |
+| `dotted` | border-style: dotted; |
+| `double` | border-style: double; |
+| `none`   | border-style: none;   |
+
+### Border-color
+
+Sets border color. `border-{color}`
+
+```html
+<p class="border border-solid border-black"></p>
+```
+
+## Transitions and Animation
+
+### Transition-property
+
+Sets the CSS properties affected by transition animations.
+
+- `transition`
+
+  ```CSS
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+- `transition-none`
+
+  ```CSS
+  transition-property: none;
+  ```
+
+- `transition-all`
+
+  ```CSS
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+- `transition-colors`
+
+  ```CSS
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+- `transition-opacity`
+
+  ```CSS
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+- `transition-shadow`
+
+  ```CSS
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+- `transition-transform`
+
+  ```CSS
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  ```
+
+### Transition-duration
+
+Sets the length of time for a transition animations to complete. `duration-{type}`
+
+| Type  | CSS                         |
+| ----- | --------------------------- |
+| `75`  | transition-duration: 75ms;  |
+| `100` | transition-duration: 100ms; |
+| `150` | transition-duration: 150ms; |
+| `200` | transition-duration: 200ms; |
+| `300` | transition-duration: 300ms; |
+| `...` | transition-duration: ...ms; |
+
+### Transition-timing-function
+
+Sets the easing function of transition animations.
+
+| Class         | CSS                                                       |
+| ------------- | --------------------------------------------------------- |
+| `ease-linear` | transition-timing-function: linear;                       |
+| `ease-in`     | transition-timing-function: cubic-bezier(0.4, 0, 1, 1);   |
+| `ease-out`    | transition-timing-function: cubic-bezier(0, 0, 0.2, 1);   |
+| `ease-in-out` | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
+
+### Transition-delay
+
+Sets the delay for transitions. `delay-{time}`
+
+| Time  | CSS                      |
+| ----- | ------------------------ |
+| `75`  | transition-delay: 75ms;  |
+| `100` | transition-delay: 100ms; |
+| `150` | transition-delay: 150ms; |
+| `200` | transition-delay: 200ms; |
+| `300` | transition-delay: 300ms; |
+| `...` | transition-delay: ...ms; |
+
+### Animation
+
+Sets CSS animations. `animate-{type}`
+
+| Type             | CSS                                                        |
+| ---------------- | ---------------------------------------------------------- |
+| `none`           | animation: none;                                           |
+| `animate-spin`   | animation: spin 1s linear infinite;                        |
+| `animate-ping`   | animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;    |
+| `animate-pulse`  | animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; |
+| `animate-bounce` | animation: bounce 1s infinite;                             |
+
+## Transforms
+
+### Scale
+
+Scales an element that has transform applied.
+
+| Class         | CSS                                   |
+| ------------- | ------------------------------------- |
+| `scale-0`     | --tw-scale-x: 0; --tw-scale-y: 0;     |
+| `scale-50`    | --tw-scale-x: .5; --tw-scale-y: .5;   |
+| `scale-75`    | --tw-scale-x: .75; --tw-scale-y: .75; |
+| `scale-90`    | --tw-scale-x: .9; --tw-scale-y: .9;   |
+| `scale-100`   | --tw-scale-x: 1; --tw-scale-y: 1;     |
+| `scale-x-...` | --tw-scale-x: ...;                    |
+| `scale-y-...` | --tw-scale-y: ...;                    |
+
+### Rotate
+
+Rotates an element that has transform applied.
+
+| Class         | CSS                   |
+| ------------- | --------------------- |
+| `rotate-0`    | --tw-rotate: 0deg;    |
+| `rotate-1`    | --tw-rotate: 1deg;    |
+| `rotate-2`    | --tw-rotate: 2deg;    |
+| `rotate-3`    | --tw-rotate: 3deg;    |
+| `rotate-...`  | --tw-rotate: ...deg;  |
+| `-rotate-...` | --tw-rotate: -...deg; |
+
+### Translate
+
+Translates an element that has transform applied.
+
+| Class              | CSS                        |
+| ------------------ | -------------------------- |
+| `translate-x-0`    | --tw-translate-x: 0px;     |
+| `translate-x-1`    | --tw-translate-x: 0.25rem; |
+| `translate-x-2`    | --tw-translate-x: 0.5rem;  |
+| `translate-x-...`  | --tw-translate-x: ...rem;  |
+| `-translate-x-...` | --tw-translate-x: -...rem; |
+| `translate-y-0`    | --tw-translate-y: 0px;     |
+| `translate-y-1`    | --tw-translate-y: 0.25rem; |
+| `translate-y-2`    | --tw-translate-y: 0.5rem;  |
+| `translate-y-...`  | --tw-translate-y: ...rem;  |
+| `-translate-y-...` | --tw-translate-y: -...rem; |
+
+### Transform
+
+Sets the transform of an element.
+
+- `transform`
+
+  ```CSS
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  ```
+
+- `transform-gpu`
+
+  ```CSS
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  .transform-none
+  transform: none;
+  ```
+
+- `transform-none`
+
+  ```CSS
+  transform: none;
+  ```
+
+## Interactivity
+
+### Cursor
+
+Changes the cursor when hovering over an element.
+
+| Class                | CSS                  |
+| -------------------- | -------------------- |
+| `cursor-auto`        | cursor: auto;        |
+| `cursor-default`     | cursor: default;     |
+| `cursor-pointer`     | cursor: pointer;     |
+| `cursor-wait`        | cursor: wait;        |
+| `cursor-text`        | cursor: text;        |
+| `cursor-move`        | cursor: move;        |
+| `cursor-help`        | cursor: help;        |
+| `cursor-not-allowed` | cursor: not-allowed; |
+
+### Outline
+
+Sets the outline of the element.
+
+| Class           | CSS                                                  |
+| --------------- | ---------------------------------------------------- |
+| `outline-none`  | outline: 2px solid transparent; outline-offset: 2px; |
+| `outline-white` | outline: 2px dotted white; outline-offset: 2px;      |
+| `outline-black` | outline: 2px dotted black; outline-offset: 2px;      |
+
+## Filter
+
+### filter
+
+Sets filter on elements.
+
+| Class         | CSS                                                                                                                                                                                |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `filter`      | filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow); |
+| `filter-none` | filter: none;                                                                                                                                                                      |
+
+### Blur
+
+Sets blur filter on elements (use with filter utility).
+
+| Class       | CSS                    |
+| ----------- | ---------------------- |
+| `blur-0`    | --tw-blur: blur(0);    |
+| `blur-none` | --tw-blur: blur(0);    |
+| `blur-sm`   | --tw-blur: blur(4px);  |
+| `blur`      | --tw-blur: blur(8px);  |
+| `blur-md`   | --tw-blur: blur(12px); |
+| `blur-lg`   | --tw-blur: blur(16px); |
+| `blur-xl`   | --tw-blur: blur(24px); |
+| `blur-2xl`  | --tw-blur: blur(40px); |
+| `blur-3xl`  | --tw-blur: blur(64px); |
+
+### Drop-shadow
+
+Sets drop-shadow filter on elements (use with filter utility).
+
+| Class              | CSS                                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------- |
+| `drop-shadow-sm`   | --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));                                                 |
+| `drop-shadow`      | --tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));    |
+| `drop-shadow-md`   | --tw-drop-shadow: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));   |
+| `drop-shadow-lg`   | --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));   |
+| `drop-shadow-xl`   | --tw-drop-shadow: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08)); |
+| `drop-shadow-2xl`  | --tw-drop-shadow: drop-shadow(0 25px 25px hsla(0, 0.00%, 0.00%, 0.15));                                    |
+| `drop-shadow-none` | --tw-drop-shadow: drop-shadow(0 0 #0000);                                                                  |
+
+## Effects
+
+### Box-shadow
+
+Sets the shadow around an element.
+
+| Class          | CSS                                                                                                                                                                                             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `shadow-sm`    | --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                          |
+| `shadow`       | --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);          |
+| `shadow-md`    | --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);    |
+| `shadow-lg`    | --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);  |
+| `shadow-xl`    | -tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
+| `shadow-2xl`   | --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                    |
+| `shadow-inner` | --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                    |
+| `shadow-none`  | --tw-shadow: 0 0 #0000; box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                                                |
+
+### Opacity
+
+Sets the transparency of an element.
+
+| Class         | CSS            |
+| ------------- | -------------- |
+| `opacity-0`   | opacity: 0;    |
+| `opacity-5`   | opacity: 0.05; |
+| `opacity-10`  | opacity: 0.1;  |
+| `opacity-20`  | opacity: 0.2;  |
+| `opacity-...` | opacity: ...;  |
+| `opacity-100` | opacity: 1;    |
 
 [🡨 Back](../README.md)
