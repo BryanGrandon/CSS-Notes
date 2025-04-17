@@ -5,6 +5,7 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 ## Table of content
 
 - [Installation](#installation)
+- [Layout](#layout)
 - [Pseudo-classes](#pseudo-classes)
 - [Typography](#typography)
 - [Sizing](#sizing)
@@ -39,6 +40,113 @@ Add an @import to your CSS file that imports Tailwind CSS.
 ```css
 @import 'tailwindcss';
 ```
+
+## Layout
+
+### Breakpoints
+
+Breakpoints (screen sizes) that wrap utility classes.
+
+| breakpoint | CSS                                |
+| ---------- | ---------------------------------- |
+| `sm:`      | @media (min-width: 640px) { ... }  |
+| `md:`      | @media (min-width: 760px) { ... }  |
+| `lg:`      | @media (min-width: 1024px) { ... } |
+| `xl:`      | @media (min-width: 1200px) { ... } |
+| `2xl:`     | @media (min-width: 1536px) { ... } |
+
+### Box-sizing
+
+Sets how the total width and height of an element is calculated.
+
+| class         | CSS                      |
+| ------------- | ------------------------ |
+| `box-border`  | box-sizing: border-box;  |
+| `box-content` | box-sizing: content-box; |
+
+### Display
+
+Sets the display box type of an element.
+
+| class          | CSS                    |
+| -------------- | ---------------------- |
+| `hidden`       | display: none;         |
+| `block`        | display: block;        |
+| `inline-block` | display: inline-block; |
+| `inline`       | display: inline;       |
+
+### Overflow
+
+Sets how to handle content that's too big for its container. `overflow-{type}`
+
+| type      | CSS                |
+| --------- | ------------------ |
+| `auto`    | overflow: auto;    |
+| `hidden`  | overflow: hidden;  |
+| `visible` | overflow: visible; |
+| `scroll`  | overflow: scroll;  |
+
+`overflow-x-{type}`
+`overflow-y-{type}`
+
+### Position
+
+Sets an element's position.
+
+| Class      | CSS                 |
+| ---------- | ------------------- |
+| `static`   | position: static;   |
+| `fixed`    | position: fixed;    |
+| `absolute` | position: absolute; |
+| `relative` | position: relative; |
+| `sticky`   | position: sticky;   |
+
+### Top, right, bottom, left
+
+Sets the placement of a positioned element.
+
+| Class          | CSS                                                           |
+| -------------- | ------------------------------------------------------------- |
+| `inset-0`      | top: 0px; right: 0px; bottom: 0px; left: 0px;                 |
+| `inset-1`      | top: 0.25rem; right: 0.25rem; bottom: 0.25rem; left: 0.25rem; |
+| `inset-2`      | top: 0.5rem; right: 0.5rem; bottom: 0.5rem; left: 0.5rem;     |
+| `inset-...`    | top: ...; right: ...; bottom: ...; left: ...;                 |
+| `inset-x-...`  | right: ...; left: ...;                                        |
+| `-inset-x-...` | right: -...; left: -...;                                      |
+| `inset-y...`   | top: ...; bottom: ...;                                        |
+| `-inset-y...`  | top: -...; bottom: -...;                                      |
+| `-inset-...`   | top: -...; right: -...; bottom: -...; left: -...;             |
+| `top-...`      | top: ...;                                                     |
+| `-top-...`     | top: -...;                                                    |
+| `right-...`    | right: ...;                                                   |
+| `-right-...`   | right: -...;                                                  |
+| `bottom-...`   | bottom: ...;                                                  |
+| `-bottom-...`  | bottom: - ...;                                                |
+| `left-...`     | left: ...;                                                    |
+| `-left-...`    | left: - ...;                                                  |
+
+### Visibility
+
+Show or hide without affecting the layout of the document.
+
+| Class       | CSS                  |
+| ----------- | -------------------- |
+| `visible`   | visibility: visible; |
+| `invisible` | visibility: hidden;  |
+
+### Z-index
+
+Sets the z-order ("stack order") of a positioned element. `z-{type}`
+
+| type   | CSS            |
+| ------ | -------------- |
+| `0`    | z-index: 0;    |
+| `10`   | z-index: 10;   |
+| `20`   | z-index: 20;   |
+| `30`   | z-index: 30;   |
+| `40`   | z-index: 40;   |
+| `50`   | z-index: 50;   |
+| `auto` | z-index: auto; |
 
 ## Pseudo-classes
 
