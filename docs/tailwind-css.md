@@ -5,7 +5,10 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 ## Table of content
 
 - [Installation](#installation)
+- [Introduction](#introduction)
+- [Size](#size)
 - [Layout](#layout)
+<!-- Checking -->
 - [Pseudo-classes](#pseudo-classes)
 - [Typography](#typography)
 - [Sizing](#sizing)
@@ -20,13 +23,13 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 - [Filter](#filter)
 - [Effects](#effects)
 
-## [Installation](https://tailwindcss.com/docs/installation/using-vite)
+## Installation
+
+### [Vite](https://tailwindcss.com/docs/installation/using-vite)
 
 ```bash
 npm install tailwindcss @tailwindcss/vite -D
 ```
-
-### Configure the Vite plugin
 
 Add the @tailwindcss/vite plugin to your Vite configuration.
 
@@ -39,17 +42,83 @@ export default defineConfig({
 })
 ```
 
-### Import Tailwind CSS
-
 Add an @import to your CSS file that imports Tailwind CSS.
 
 ```css
 @import 'tailwindcss';
 ```
 
+## Introduction
+
+Tailwind's CSS utility classes are mostly abbreviations for the properties we write in CSS.
+This allows us to intuitively understand Tailwind's classes
+
+| CSS                | TailwindCSS classes |
+| ------------------ | ------------------- |
+| `width: ...`       | `w-{size}`          |
+| `min-width: ...`   | `min-w-{size}`      |
+| `max-width: ...`   | `max-w-{size}`      |
+| `padding: ...`     | `p-{size}`          |
+| `margin: ...`      | `m-{size}`          |
+| `display: none`    | `hidden`            |
+| `overflow: hidden` | `overflow-hidden`   |
+
+when the value that can be entered is negative, only a dash (`-`) is added at the beginning of the class
+
+```HTML
+<div class="absolute top-2"></div> <!-- CSS: top:0.5rem -->
+<div class="absolute -top-2"></div> <!-- CSS: top: -0.25rem -->
+```
+
+## Size
+
+When we want to set a **small** size, the property is indicated followed by a number `w-0`. Each number indicates by how much `0.25rem` will be multiplied.
+
+```HTML
+<div class="w-0"></div> <!-- CSS: width: 0rem -->
+<div class="w-4"></div> <!-- CSS: width: 1rem -->
+```
+
+When we want to set a **medium** size, the property is indicated followed by a nomenclature similar to the nomenclature for sizes in clothing `w-md`.
+
+| Nomenclature | Size  |
+| ------------ | ----- |
+| `xs`         | 20rem |
+| `sm`         | 24rem |
+| `md`         | 28rem |
+| `lg`         | 32rem |
+| `xl`         | 36rem |
+| `2xl`        | 42rem |
+| `3xl`        | 48rem |
+
+```HTML
+<div class="w-lg"></div> <!-- CSS: width: 32rem -->
+```
+
+When we want to set a **large** size, we specify the property followed by the `w-auto` keyword.
+
+| Size     | CSS           |
+| -------- | ------------- |
+| `none`   | none          |
+| `auto`   | auto          |
+| `full`   | 100%          |
+| `screen` | 100vw / 100vh |
+| `min`    | min-content   |
+| `max`    | max-content   |
+
+```HTML
+<div class="w-screen-lg"></div> <!-- CSS: width: 1024px -->
+```
+
+When we want to set a dynamic size, we specify the property followed by a fraction `w-1/2`. The fraction tells us how much of 100% will be used.
+
+```HTML
+<div class="w-1/4"></div> <!-- CSS: width: 25% -->
+```
+
 ## Layout
 
-### Breakpoints
+### Breakpoints \Change
 
 Breakpoints (screen sizes) that wrap utility classes.
 
@@ -61,7 +130,7 @@ Breakpoints (screen sizes) that wrap utility classes.
 | `xl:`      | @media (min-width: 1200px) { ... } |
 | `2xl:`     | @media (min-width: 1536px) { ... } |
 
-### Box-sizing
+### Box-sizing \Change
 
 Sets how the total width and height of an element is calculated.
 
@@ -72,87 +141,63 @@ Sets how the total width and height of an element is calculated.
 
 ### Display
 
-Sets the display box type of an element.
+To set the type of display box for an element, type the desired value directly.
 
-| class          | CSS                    |
-| -------------- | ---------------------- |
-| `hidden`       | display: none;         |
-| `block`        | display: block;        |
-| `inline-block` | display: inline-block; |
-| `inline`       | display: inline;       |
+```HTML
+<div class="block"></div> <!-- CSS: display: block -->
+```
 
 ### Overflow
 
-Sets how to handle content that's too big for its container. `overflow-{type}`
+To set how to handle content that is too large for its container, we write the property followed by its `overflow-hidden` value.
 
-| type      | CSS                |
-| --------- | ------------------ |
-| `auto`    | overflow: auto;    |
-| `hidden`  | overflow: hidden;  |
-| `visible` | overflow: visible; |
-| `scroll`  | overflow: scroll;  |
+```HTML
+<!-- CSS: overflow: hidden; width: 2.5rem; height: 2.5rem -->
+<div class="w-10 h-10 overflow-hidden"></div>
+```
 
-`overflow-x-{type}`
-`overflow-y-{type}`
+In addition, you can specify horizontal (`overflow-x-{value}`) and vertical (`overflow-y-{value}`) overflow.
+
+```HTML
+<!-- CSS: overflow: hidden; width: 2.5rem; height: 2.5rem -->
+<div class="w-10 h-10 overflow-y-hidden overflow-x-auto"></div>
+```
 
 ### Position
 
-Sets an element's position.
+To set the position of an element, the value of the CSS property `absolute` is written directly.
 
-| Class      | CSS                 |
-| ---------- | ------------------- |
-| `static`   | position: static;   |
-| `fixed`    | position: fixed;    |
-| `absolute` | position: absolute; |
-| `relative` | position: relative; |
-| `sticky`   | position: sticky;   |
+```HTML
+<div class="fixed"></div> <!-- CSS: position: fixed; -->
+```
 
-### Top, right, bottom, left
+To set the placement of a positioned element, the CSS property is used directly followed by a **number** or **fraction** `top-4`. The properties are as follows: `top`, `bottom`, `left`, `right`, `inset`.
 
-Sets the placement of a positioned element.
-
-| Class          | CSS                                                           |
-| -------------- | ------------------------------------------------------------- |
-| `inset-0`      | top: 0px; right: 0px; bottom: 0px; left: 0px;                 |
-| `inset-1`      | top: 0.25rem; right: 0.25rem; bottom: 0.25rem; left: 0.25rem; |
-| `inset-2`      | top: 0.5rem; right: 0.5rem; bottom: 0.5rem; left: 0.5rem;     |
-| `inset-...`    | top: ...; right: ...; bottom: ...; left: ...;                 |
-| `inset-x-...`  | right: ...; left: ...;                                        |
-| `-inset-x-...` | right: -...; left: -...;                                      |
-| `inset-y...`   | top: ...; bottom: ...;                                        |
-| `-inset-y...`  | top: -...; bottom: -...;                                      |
-| `-inset-...`   | top: -...; right: -...; bottom: -...; left: -...;             |
-| `top-...`      | top: ...;                                                     |
-| `-top-...`     | top: -...;                                                    |
-| `right-...`    | right: ...;                                                   |
-| `-right-...`   | right: -...;                                                  |
-| `bottom-...`   | bottom: ...;                                                  |
-| `-bottom-...`  | bottom: - ...;                                                |
-| `left-...`     | left: ...;                                                    |
-| `-left-...`    | left: - ...;                                                  |
+```HTML
+<div class="absolute top-1"></div> <!-- CSS: top: 0.25rem; -->
+<div class="absolute -top-2"></div> <!-- CSS: top: -0.5rem; -->
+<div class="absolute top-1/2"></div> <!-- CSS: top: 50%; -->
+<div class="absolute inset-4"></div> <!-- CSS: inset: 1rem -->
+```
 
 ### Visibility
 
-Show or hide without affecting the layout of the document.
+To show or hide without affecting the layout of the document. Use `visible` to show and `invisible` to hide.
 
-| Class       | CSS                  |
-| ----------- | -------------------- |
-| `visible`   | visibility: visible; |
-| `invisible` | visibility: hidden;  |
+```HTML
+<div class="visible"></div> <!-- CSS: visibility: visible; -->
+<div class="invisible"></div> <!-- CSS: visibility: hidden; -->
+```
 
 ### Z-index
 
-Sets the z-order ("stack order") of a positioned element. `z-{type}`
+To set the z-order (“stack order”) of a positioned element, we write the property followed by a number `z-10`.
 
-| type   | CSS            |
-| ------ | -------------- |
-| `0`    | z-index: 0;    |
-| `10`   | z-index: 10;   |
-| `20`   | z-index: 20;   |
-| `30`   | z-index: 30;   |
-| `40`   | z-index: 40;   |
-| `50`   | z-index: 50;   |
-| `auto` | z-index: auto; |
+```HTML
+<div class="z-10"></div>
+```
+
+The higher the number, the higher the priority of the element.
 
 ## Pseudo-classes
 
@@ -277,122 +322,6 @@ Sets the capitalization of text. `text-{transform}`
 
 ```html
 <p class="capitalize">Text bold</p>
-```
-
-## Sizing
-
-### Width
-
-Sets the width of an element. `w-{width}`
-
-| Width    | CSS                 |
-| -------- | ------------------- |
-| `0`      | width: 0px;         |
-| `1`      | width: 0.25rem;     |
-| `2`      | width: 0.5rem;      |
-| `3`      | width: 0.75rem;     |
-| `4`      | width: 1rem;        |
-| `...`    | width: ...;         |
-| `auto`   | width: auto;        |
-| `1/2`    | width: 50%;         |
-| `full`   | width: 100%;        |
-| `screen` | width: 100vw;       |
-| `min`    | width: min-content; |
-| `max`    | width: max-content; |
-
-```html
-<div class="w-10"></div
-```
-
-### Min-width
-
-Sets the minimum width of an element. `min-w-{width}`
-
-| Width  | CSS                     |
-| ------ | ----------------------- |
-| `0`    | min-width: 0px;         |
-| `full` | min-width: 100%;        |
-| `min`  | min-width: min-content; |
-| `max`  | min-width: max-content; |
-
-```html
-<div class="min-w-max"></div
-```
-
-### Max-width
-
-Sets the maximum width of an element. `max-w-{width}`
-
-| Width                  | CSS               |
-| ---------------------- | ----------------- |
-| `0`                    | max-width: 0rem;  |
-| `none`                 | max-width: none;  |
-| `xs`                   | max-width: 20rem; |
-| `sm`                   | max-width: 24rem; |
-| `md`                   | max-width: 28rem; |
-| `lg`                   | max-width: 32rem; |
-| `xl`                   | max-width: 36rem; |
-| `2xl`                  | max-width: 42rem; |
-| `3xl`                  | max-width: 48rem; |
-| `screen-{breakpoints}` | max-width: 640px; |
-
-```html
-<div class="max-w-ld"></div
-<div class="max-w-screen-sm"></div
-```
-
-### Height
-
-Sets the height of an element. `h-{height}`
-
-| Height   | CSS              |
-| -------- | ---------------- |
-| `0`      | height: 0px;     |
-| `1`      | height: 0.25rem; |
-| `2`      | height: 0.5rem;  |
-| `3`      | height: 0.75rem; |
-| `4`      | height: 1rem;    |
-| `...`    | height: ...;     |
-| `auto`   | height: auto;    |
-| `1/2`    | height: 50%;     |
-| `full`   | height: 100%     |
-| `screen` | height: 100vh    |
-
-```html
-<div class="h-8"></div>
-```
-
-### Min-height
-
-Sets the minimum width of an element. `min-h-{width}`
-
-| Width    | CSS                |
-| -------- | ------------------ |
-| `0`      | min-height: 0px;   |
-| `full`   | min-height: 100%;  |
-| `screen` | min-height: 100vh; |
-
-```html
-<div class="min-h-full"></div>
-```
-
-### Max-height
-
-Sets the maximum height of an element. `max-h-{height}`
-
-| Height   | CSS                  |
-| -------- | -------------------- |
-| `0`      | max-height: 0px;     |
-| `1`      | max-height: 0.25rem; |
-| `2`      | max-height: 0.5rem;  |
-| `3`      | max-height: 0.75rem; |
-| `4`      | max-height: 1rem;    |
-| `...`    | max-height: ...;     |
-| `full`   | max-height: 100%;    |
-| `screen` | max-height: 100vh;   |
-
-```html
-<div class="max-h-screen"></div>
 ```
 
 ## Backgrounds
