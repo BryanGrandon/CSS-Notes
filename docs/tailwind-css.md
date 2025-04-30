@@ -8,10 +8,9 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 - [Introduction](#introduction)
 - [Size](#size)
 - [Layout](#layout)
-<!-- Checking -->
 - [Pseudo-classes](#pseudo-classes)
 - [Typography](#typography)
-- [Sizing](#sizing)
+<!-- Checking -->
 - [Backgrounds](#backgrounds)
 - [Flex box](#flex-box)
 - [Grid](#grid)
@@ -201,52 +200,42 @@ The higher the number, the higher the priority of the element.
 
 ## Pseudo-classes
 
-### Hover
+Pseudoclasses must be written for each property to be modified in the assigned element, this is done by writing the pseudoclass followed by the property to be modified `hover:w-20`.
 
-Add the hover: prefix to only apply a utility on hover. `hover:`
-
-```html
-<p class="hover:text-red-500">Text</p>
-```
-
-### Active
-
-Add the active: prefix to only apply a utility when an element is active. `active:`
-
-```html
-<p class="active:text-red-500">Text</p>
-```
-
-### Focus
-
-Add the focus: prefix to only apply a utility on focus. `focus:`
-
-```html
-<p class="focus:text-red-500">Text</p>
+```HTML
+<div class="hover:w-20"></div>  <!-- CSS: @:hover { width: 5rem } -->
+<div class="active:scale-95"></div> <!-- CSS: @:active { scale: 0.95 } -->
 ```
 
 ## Typography
 
-### Text color
+| Property       | TailwindCSS class      | CSS                               |
+| -------------- | ---------------------- | --------------------------------- |
+| Color          | `text-{color}-{light}` | color: color ;                    |
+| font-size      | `text-{size}`          | font-size: ...; line-height: ...; |
+| text-alight    | `text-center`          | text-align: center;               |
+| text-transform | `text-uppercase`       | text-transform: uppercase;        |
 
-Sets background color. `text-{color}-{strong}`
-
-```html
-<p class="text-gray-100">Text</p>
-<p class="text-red-500">Text</p>
+```HTML
+<div class="text-red-500"></div>  <!-- CSS: color: #fb2c36; -->
+<div class="text-lg"></div> <!-- CSS:  font-size: 1.125rem; line-height: 1.75rem; -->
+<div class="text-center"></div> <!-- CSS: text-align: center; -->
+<div class="text-capitalize"></div> <!-- CSS: text-transform: capitalize; -->
 ```
 
-### Text opacity
+### Font Size
 
-Sets background opacity when used with bg-[color]. `text-opacity-{%}`
-
-```html
-<p class="text-opacity-50">Text</p>
-```
+| Size        | CSS                                        |
+| ----------- | ------------------------------------------ |
+| `text-xs`   | font-size: 0.75rem; line-height: 1rem;     |
+| `text-sm`   | font-size: 0.875rem; line-height: 1.25rem; |
+| `text-base` | font-size: 1rem; line-height: 1.5rem;      |
+| `text-lg`   | font-size: 1.125rem; line-height: 1.75rem; |
+| `text-xl`   | font-size: 1.25rem; line-height: 1.75rem;  |
 
 ### Font-family
 
-Sets the font family. `font-{type}`
+To set the font family, you must start with the word `font` followed by the font to use `font-sans`.
 
 | type    | CSS                                             |
 | ------- | ----------------------------------------------- |
@@ -254,24 +243,8 @@ Sets the font family. `font-{type}`
 | `serif` | font-family: ui-serif, Georgia, Cambria, ...;   |
 | `mono`  | font-family: ui-monospace, SFMono-Regular, ...; |
 
-```html
-<p class="font-sans">Text sans</p>
-```
-
-### Font-size
-
-Sets the font size. `text-{size}`
-
-| Size   | CSS                                        |
-| ------ | ------------------------------------------ |
-| `xs`   | font-size: 0.75rem; line-height: 1rem;     |
-| `sm`   | font-size: 0.875rem; line-height: 1.25rem; |
-| `base` | font-size: 1rem; line-height: 1.5rem;      |
-| `lg`   | font-size: 1.125rem; line-height: 1.75rem; |
-| `xl`   | font-size: 1.25rem; line-height: 1.75rem;  |
-
-```html
-<p class="text-sm">Text</p>
+```HTML
+<p class="font-sans">Text</p>
 ```
 
 ### Font-weight
@@ -292,36 +265,6 @@ Sets the font weight. `font-{weight}`
 
 ```html
 <p class="font-bold">Text bold</p>
-```
-
-### Text-align
-
-Sets the alignment of text. `text-{alignment}`
-
-| Alignment | CSS                  |
-| --------- | -------------------- |
-| `left`    | text-align: left;    |
-| `center`  | text-align: center;  |
-| `right`   | text-align: right;   |
-| `justify` | text-align: justify; |
-
-```html
-<p class="text-center">Text bold</p>
-```
-
-### Text-transform
-
-Sets the capitalization of text. `text-{transform}`
-
-| Transform     | CSS                         |
-| ------------- | --------------------------- |
-| `uppercase`   | text-transform: uppercase;  |
-| `lowercase`   | text-transform: lowercase;  |
-| `capitalize`  | text-transform: capitalize; |
-| `normal-case` | text-transform: none;       |
-
-```html
-<p class="capitalize">Text bold</p>
 ```
 
 ## Backgrounds
