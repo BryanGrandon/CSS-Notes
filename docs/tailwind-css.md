@@ -10,7 +10,6 @@ Tailwind CSS is a utility-first CSS framework with predefined classes that you c
 - [Layout](#layout)
 - [Pseudo-classes](#pseudo-classes)
 - [Typography](#typography)
-<!-- Checking -->
 - [Backgrounds](#backgrounds)
 - [Flex box](#flex-box)
 - [Grid](#grid)
@@ -271,16 +270,10 @@ Sets the font weight. `font-{weight}`
 
 ### background-attachment
 
-Sets behavior of background images when scrolling. `bg-{attachment}`
+Sets the behavior of background images when scrolling. type `bg` followed by the value of attachment.
 
-| Attachment | CSS                           |
-| ---------- | ----------------------------- |
-| `fixed`    | background-attachment: fixed; |
-| `local`    | background-attachment: local; |
-| `scroll`   | background-attachment: scroll |
-
-```html
-<div class="bg-fixed"></div>
+```HTML
+<div class="bg-fixed"></div> <!-- CSS: background-attachment: fixed; -->
 ```
 
 ### Background-clip
@@ -296,7 +289,7 @@ Sets where a background extends. `bg-clip-{clip}`
 
 ### Background-color
 
-Sets background color. `bg-{color}-{strong}`
+Sets the background color. type `bg` followed by the color.
 
 ```html
 <div class="bg-red-500"></div>
@@ -304,36 +297,18 @@ Sets background color. `bg-{color}-{strong}`
 
 ### Background-position
 
-Sets position of a background image. `bg-{position}`
+Sets the position of a background image. type `bg` followed by the position value.
 
-| Position       | CSS                                |
-| -------------- | ---------------------------------- |
-| `bottom`       | background-position: bottom;       |
-| `center`       | background-position: center;       |
-| `left`         | background-position: left;         |
-| `left-bottom`  | background-position: left bottom;  |
-| `left-top`     | background-position: left top;     |
-| `right`        | background-position: right;        |
-| `right-bottom` | background-position: right bottom; |
-| `right-top`    | background-position: right top;    |
-| `top`          | background-position: top;          |
-
-```html
-<div class="bg-center"></div>
+```HTML
+<div class="bg-center"></div> <!-- CSS: background-position: center; -->
 ```
 
 ### Background-size
 
-Sets background size of a background image. `bg-{size}`
+Sets the background size of a background image. you type `bg` followed by the value of the property.
 
-| Size      | CSS                       |
-| --------- | ------------------------- |
-| `auto`    | background-size: auto;    |
-| `cover`   | background-size: cover;   |
-| `contain` | background-size: contain; |
-
-```html
-<div class="bg-cover"></div>
+```HTML
+<div class="bg-cover"></div> <!-- CSS: background-size: cover; -->
 ```
 
 ### Gradient color
@@ -348,134 +323,78 @@ Sets the background color gradients and where to stop. `from-{color}`, `to-{colo
 
 ### Display
 
-Sets element to be a flex container.
+Sets element to be a flex container. write the value of the property
 
-| display       | CSS                   |
-| ------------- | --------------------- |
-| `flex`        | display: flex;        |
-| `inline-flex` | display: inline-flex; |
-
-```html
-<p class="flex">Text</p>
+```HTML
+<p class="flex">Text</p> <!-- CSS: display: flex; -->
 ```
 
 ### Flex-direction
 
-Sets direction of flex items. `flex-{direction}`
+To set the address of flexible elements, type `flex` followed by the address you want to set.
 
-| direction     | CSS                             |
-| ------------- | ------------------------------- |
-| `row`         | flex-direction: row;            |
-| `row-reverse` | flex-direction: row-reverse;    |
-| `col`         | flex-direction: column;         |
-| `col-reverse` | flex-direction: column-reverse; |
-
-```html
-<p class="flex flex-col">Text</p>
+```HTML
+<p class="flex-col">Text</p> <!-- CSS: flex-direction: column; -->
 ```
 
 ### Flex-wrap
 
-Creates how flex items wrap. `flex-{wrap}`
+Creates how flex items wrap. It is written `flex` followed by the value of the `flex-wrap` property.
 
-| Wrap           | CSS                      |
-| -------------- | ------------------------ |
-| `wrap`         | flex-wrap: wrap;         |
-| `wrap-reverse` | flex-wrap: wrap-reverse; |
-| `no-wrap`      | flex-wrap: nowrap;       |
-
-```html
-<p class="flex flex-row flex-no-wrap">Text</p>
+```HTML
+<div class="flex-wrap"></div> <!-- CSS: flex-wrap: wrap -->
+<div class="flex-no-wrap"></div> <!-- CSS: flex-wrap: nowrap -->
 ```
 
 ## Grid
 
 ### Display
 
-Sets element to be a grid container.
+Sets the element to be a grid container. write the value of the property
 
-| Grid          | CSS                   |
-| ------------- | --------------------- |
-| `grid`        | display: grid;        |
-| `inline-grid` | display: inline-grid; |
-
-```html
-<p class="grid">Text</p>
+```HTML
+<p class="grid">Text</p> <!-- CSS: display: grid; -->
 ```
 
 ### Grid-template-columns
 
-Defines columns for grid layout. `grid-cols-{columns}`
+Defines columns for grid layout. type `grid-cols` followed by the value to set.
 
-| Columns | CSS                                                 |
-| ------- | --------------------------------------------------- |
-| `1`     | grid-template-columns: repeat(1, minmax(0, 1fr));   |
-| `2`     | grid-template-columns: repeat(2, minmax(0, 1fr));   |
-| `3`     | grid-template-columns: repeat(3, minmax(0, 1fr));   |
-| `...`   | grid-template-columns: repeat(..., minmax(0, 1fr)); |
-| `12`    | grid-template-columns: repeat(12, minmax(0, 1fr));  |
-| `none`  | grid-template-columns: none;                        |
-
-```html
-<div class="grid grid-cols-3"></div>
+```HTML
+<div class="grid-cols-2"></div> <!-- grid-template-columns: repeat(2, minmax(0, 1fr)); -->
 ```
 
 ### Grid-template-rows
 
-Defines rows for grid layout. `grid-rows-{type}`
+Defines rows for grid layout. type `grid-rows` followed by the value to set.
 
-| type   | CSS                                              |
-| ------ | ------------------------------------------------ |
-| `1`    | grid-template-rows: repeat(1, minmax(0, 1fr));   |
-| `2`    | grid-template-rows: repeat(2, minmax(0, 1fr));   |
-| `3`    | grid-template-rows: repeat(3, minmax(0, 1fr));   |
-| `...`  | grid-template-rows: repeat(..., minmax(0, 1fr)); |
-| `6`    | grid-template-rows: repeat(12, minmax(0, 1fr));  |
-| `none` | grid-template-rows: none;                        |
+```HTML
+<div class="grid-rows-3"></div> <!-- CSS: grid-template-rows: repeat(3 minmax(0, 1fr)); -->
+```
 
-### Grid-column, Grid-rows - start/end
+### Grid-column, Grid-rows
 
-Sets a grid item size and location within the grid column. `col-{type}`
+Sets the size and location of a grid element within the column and row of the grid. type `col` for column and `row` for rows followed by the distribution to set.
 
-Sets a grid item size and location within the grid row. `row-{type}`
+```HTML
+<div class="col-span-1"></div> <!-- CSS: grid-column: span 1 /span 1; -->
+<div class="row-span-full"></div> <!-- CSS: grid-row: 1 / -1; -->
+```
 
-| type         | CSS                                      |
-| ------------ | ---------------------------------------- |
-| `auto`       | grid-{column, row}: auto;                |
-| `span-1`     | grid-{column, row}: span 1 / span 1;     |
-| `span-2`     | grid-{column, row}: span 2 / span 2;     |
-| `span-3`     | grid-{column, row}: span 3 / span 3;     |
-| `span-...`   | grid-{column, row}: span ... / span ...; |
-| `span-12`    | grid-{column, row}: span 12 / span 12;   |
-| `span-full`  | grid-{column, row}: 1 / -1;              |
-| `start-1`    | grid-{column, row}-start: 1;             |
-| `start-2`    | grid-{column, row}-start: 2;             |
-| `start-3`    | grid-{column, row}-start: 3;             |
-| `start-...`  | grid-{column, row}-start: ...;           |
-| `start-12`   | grid-{column, row}-start: 12;            |
-| `start-auto` | grid-{column, row}-start: auto;          |
-| `end-1`      | grid-{column, row}-end: 1;               |
-| `end-2`      | grid-{column, row}-end: 2;               |
-| `end-3`      | grid-{column, row}-end: 3;               |
-| `end-...`    | grid-{column, row}-end: ...;             |
-| `end-13`     | grid-{column, row}-end: 13;              |
-| `end-auto`   | grid-{column, row}-end: auto;            |
+Sets the location of the start and end of a grid element.
 
-```html
-<p class="col-start-1 col-end-3">Col</p>
-<p class="row-start-1 row-end-3">Col</p>
+```HTML
+<div class="row-start-1"></div> <!-- CSS: grid-row-start: 1; -->
+<div class="col-end-auto"></div> <!-- CSS: grid-column-end: auto; -->
 ```
 
 ### Grid-auto-flow
 
-Controls the auto placement of grid elements. `grid-flow-{direction}`
+Controls the auto placement of grid elements. type `grid-flow` followed by the address you want to set.
 
-| Direction      | CSS                           |
-| -------------- | ----------------------------- |
-| `row`          | grid-auto-flow: row;          |
-| `column`       | grid-auto-flow: column;       |
-| `row-dense`    | grid-auto-flow: row dense;    |
-| `column-dense` | grid-auto-flow: column dense; |
+```HTML
+<div class="grid-flow-column"></div> <!-- CSS: grid-auto-flow: column; -->
+```
 
 ### Grid-auto-columns, Grid-auto-rows
 
@@ -491,306 +410,178 @@ Controls the size of auto-generated (implicit) grid rows. `auto-rows-{type}`
 
 ### Gap
 
-Sets the gaps (gutters) between rows and columns. `gap-{type}`
+To set the gaps (gutters) between rows and columns, type the `gap` property directly followed by the [size](#size) you want to assign
 
-| type  | CSS                  |
-| ----- | -------------------- |
-| `0`   | gap: 0px;            |
-| `1`   | gap: 0.25rem;        |
-| `2`   | gap: 0.5rem;         |
-| `3`   | gap: 0.75rem;        |
-| `4`   | gap: 1rem;           |
-| `...` | gap: ...;            |
-| `x-0` | column-gap: 0px;     |
-| `x-1` | column-gap: o.25rem; |
-| `x-2` | column-gap: 0.5rem;  |
-| `x-3` | column-gap: 0.75rem; |
-| `x-4` | column-gap: 0.1rem;  |
-| `...` | column-gap: ...;     |
-| `y-0` | row-gap: 0px;        |
-| `y-1` | row-gap: 0.25rem;    |
-| `y-2` | row-gap: 0.5rem;     |
-| `y-3` | row-gap: 0.75rem;    |
-| `y-4` | row-gap: 1rem;       |
-| `...` | row-gap: ...;        |
+```HTML
+<div class="gap-4"></div> <!-- CSS: gap: 1rem; -->
+```
 
-```html
-<div class="grid gap-4">
-  <p>1</p>
-  <p>2</p>
-</div>
+To set the gap between columns type `gap-x` followed by the size to be set and to set the gap between rows change the x by the y
+
+```HTML
+<div class="gap-x-2"></div> <!-- CSS: column-gap: 0.5rem; -->
+<div class="gap-y-3"></div> <!-- CSS: row-gap: 0.75rem; -->
 ```
 
 ## Box Alignment
 
 ### Justify-content
 
-Controls how flex items are positioned along container's main axis. `justify-{type}`
+Controls how flex items are positioned along container's main axis. the `justify` property is written directly followed by the property value.
 
-| Type      | CSS                             |
-| --------- | ------------------------------- |
-| `start`   | justify-content: flex-start;    |
-| `end`     | justify-content: flex-end;      |
-| `center`  | justify-content: center;        |
-| `between` | justify-content: space-between; |
-| `around`  | justify-content: space-around;  |
-| `evenly`  | justify-content: space-evenly;  |
+```HTML
+<div class="justify-between"></div> <!-- CSS: justify-content: space-between; -->
+```
 
 ### Justify-items
 
-Controls default alignment for items on the inline axis for grids. `justify-items-{type}`
+Controls default alignment for items on the inline axis for grids. the `justify-items` property is written directly followed by the property value.
 
-| Type      | CSS                     |
-| --------- | ----------------------- |
-| `start`   | justify-items: start;   |
-| `end`     | justify-items: end;     |
-| `center`  | justify-items: center;  |
-| `stretch` | justify-items: stretch; |
+```HTML
+<div class="justify-items-end"></div> <!-- CSS: justify-items: end; -->
+```
 
 ### Justify-self
 
-Controls element alignment on the inline axis for a grid item. `justify-self-{type}`
+Controls element alignment on the inline axis for a grid item. the `justify-self` property is written directly followed by the property value.
 
-| Type      | CSS                    |
-| --------- | ---------------------- |
-| `auto`    | justify-self: auto;    |
-| `start`   | justify-self: start;   |
-| `end`     | justify-self: end;     |
-| `center`  | justify-self: center;  |
-| `stretch` | justify-self: stretch; |
+```HTML
+<div class="justify-self-stretch"></div> <!-- CSS: justify-self: stretch; -->
+```
 
 ### Align-content
 
-Controls how lines are positioned in multi-line flex containers. `content-{type}`
+Controls how lines are positioned in multi-line flex containers. type `content` followed by the value of the property.
 
-| Type      | CSS                           |
-| --------- | ----------------------------- |
-| `start`   | align-content: flex-start;    |
-| `center`  | align-content: center;        |
-| `end`     | align-content: flex-end;      |
-| `between` | align-content: space-between; |
-| `around`  | align-content: space-around;  |
-| `evenly`  | align-content: space-evenly;  |
+```HTML
+<div class="content-evenly"></div> <!-- CSS: align-content: space-evenly; -->
+```
 
 ### Align-items
 
-Sets flex items position along a contrainer's cross axis. `items-{type}`
+Sets the position of the flexible elements along the transverse axis of a container. type `items` followed by the value of the property.
 
-| Type       | CSS                      |
-| ---------- | ------------------------ |
-| `stretch`  | align-items: stretch;    |
-| `start`    | align-items: flex-start; |
-| `end`      | align-items: flex-end;   |
-| `center`   | align-items: center;     |
-| `baseline` | align-items: baseline;   |
+```HTML
+<div class="items-center"></div> <!-- CSS: align-items: center; -->
+```
 
 ### Align-self
 
-Controls how an individual flex item is positioned along container's cross axis. `self-{type}`
+Controls how an individual flexible element is positioned along the cross axis of the container. type `self` followed by the property value.
 
-| Type       | CSS                     |
-| ---------- | ----------------------- |
-| `auto`     | align-self: auto;       |
-| `start`    | align-self: flex-start; |
-| `end`      | align-self: flex-end;   |
-| `center`   | align-self: center;     |
-| `stretch`  | align-self: stretch;    |
-| `baseline` | align-self: baseline;   |
+```HTML
+<div class="self-auto"></div> <!-- CSS: align-self: auto; -->
+```
 
 ### Padding
 
-Controls padding in 0.25rem increments. `p-{type}`
+To set the padding, type `p` followed by the [size](#size) to be set.
 
-| Type  | CSS               |
-| ----- | ----------------- |
-| `0`   | padding: 0px;     |
-| `1`   | padding: 0.25rem; |
-| `2`   | padding: 0.5rem;  |
-| `3`   | padding: 0.75rem; |
-| `4`   | padding: 1rem;    |
-| `...` | padding: ...;     |
+```HTML
+<div class="p-4"></div> <!-- CSS: padding: 1rem; -->
+```
 
-padding left\right `px-{type}`
+Padding can be set vertically, horizontally and individually
 
-padding top\bottom `py-{type}`
-
-padding top `pt-{type}`
-
-padding bottom `pb-{type}`
-
-padding left `pl-{type}`
-
-padding right `pr-{type}`
+```HTML
+<div class="px-4"></div> <!-- CSS: padding-left: 1rem; padding-right: 1rem; -->
+<div class="pt-4"></div> <!-- CSS: padding-top: 1rem; -->
+```
 
 ### Margin
 
-Controls margin (and negative margin) in 0.25rem increments. `m-{type}` `-m-{type}`
+To set the margin, type `m` followed by the [size](#size) to be set.
 
-| Type  | CSS              |
-| ----- | ---------------- |
-| `0`   | margin: 0px;     |
-| `1`   | margin: 0.25rem; |
-| `2`   | margin: 0.5rem;  |
-| `3`   | margin: 0.75rem; |
-| `4`   | margin: 1rem;    |
-| `...` | margin: ...;     |
+```HTML
+<div class="m-4"></div> <!-- CSS: margin: 1rem; -->
+```
 
-margin left\right `mx-{type}`, `-mx-{type}`
+Margin can be set vertically, horizontally and individually
 
-margin top\bottom `my-{type}`, `-my-{type}`
-
-margin top `mt-{type}`, `-mt-{type}`
-
-margin bottom `mb-{type}`, `-mb-{type}`
-
-margin left `ml-{type}`, `-ml-{type}`
-
-margin right `mr-{type}`, `-mr-{type}`
+```HTML
+<div class="mx-4"></div> <!-- CSS: margin-left: 1rem; margin-right: 1rem; -->
+<div class="mt-4"></div> <!-- CSS: margin-top: 1rem; -->
+```
 
 ## Border
 
 ### border-radius
 
-Sets border radius. `rounded-{type}`
+To set the border radius, type `rounded` followed by the nomenclature of the size to be set.
 
-| Type   | CSS                      |
-| ------ | ------------------------ |
-| `none` | border-radius: 0px;      |
-| `sm`   | border-radius: 0.125rem; |
-| ` `    | border-radius: 0.25rem;  |
-| `md`   | border-radius: 0.375rem; |
-| `lg`   | border-radius: 0.5rem;   |
-| `xl`   | border-radius: 0.75rem;  |
-| `2xl`  | border-radius: 1rem;     |
-| `3xl`  | border-radius: 1.5rem;   |
-| `full` | border-radius: 9999px;   |
+```HTML
+<div class="rounded-2xl"></div> <!-- CSS: border-radius: 1rem; -->
+```
 
-`rounded-t-{type}` : border-top-left-radius: ...; border-top-right-radius: ...;
+In addition, the border radius can be set for each position.
 
-`rounded-r-{type}` : border-top-right-radius: ...; border-bottom-right-radius: ...;
-
-`rounded-b-{type}` : border-bottom-right-radius: ...; border-bottom-left-radius: ...;
-
-`rounded-l-{type}` : border-top-left-radius: ...; border-bottom-left-radius: ...;
-
-`rounded-tl-{type}` : border-top-left-radius: ...;
-
-`rounded-tr-{type}` : border-top-right-radius: ...;
-
-`rounded-br-{type}` : border-bottom-right-radius: ...;
-
-`rounded-bl-{type}` : border-bottom-left-radius: ...;
+```HTML
+<div class="border-t-2xl"></div> <!-- CSS: border-top-left-radius: 1rem; border-top-right-radius: 1rem; -->
+<div class="border-tl-2xl"></div> <!-- CSS: border-top-left-radius: 1rem; -->
+```
 
 ### Border-width
 
-Sets border width in increments of 1px.
+To set the border style, directly type the `border` property followed by the size you want to set.
 
-| Class             | CSS                       |
-| ----------------- | ------------------------- |
-| `border`          | border-width: 1px;        |
-| `border-0`        | border-width: 0px;        |
-| `border-2`        | border-width: 2px;        |
-| `border-4`        | border-width: 4px;        |
-| `border-8`        | border-width: 8px;        |
-| `border-t-{size}` | border-top-width: ...;    |
-| `border-r-{size}` | border-right-width: ...;  |
-| `border-b-{size}` | border-bottom-width: ...; |
-| `border-l-{size}` | border-left-width: ...;   |
+```HTML
+<div class="border"></div> <!-- border-width: 1px; -->
+```
+
+In addition, each side of the element can be set individually.
+
+| Position | TailwindCSS class | CSS                      |
+| -------- | ----------------- | ------------------------ |
+| top      | `border-t-2`      | border-top-width: 2px    |
+| bottom   | `border-b-3`      | border-bottom-width: 3px |
+| left     | `border-l-4`      | border-left-width: 4px   |
+| right    | `border-r-5`      | border-right-width: 5px  |
 
 ### Border-style
 
-Sets border style. `border-{style}`
+To set the border style, directly type the `border` property followed by the value of the property to set.
 
-| style    | CSS                   |
-| -------- | --------------------- |
-| `solid`  | border-style: solid;  |
-| `dashed` | border-style: dashed; |
-| `dotted` | border-style: dotted; |
-| `double` | border-style: double; |
-| `none`   | border-style: none;   |
+```HTML
+<div class="border-solid"></div> <!-- CSS: border-style: solid; -->
+```
 
 ### Border-color
 
-Sets border color. `border-{color}`
+To sets border color, type directly the `border` property followed by the color to set.
 
-```html
-<p class="border border-solid border-black"></p>
+```HTML
+<p class="border-black"></p> <!-- CSS: border-color: black; -->
 ```
 
 ## Transitions and Animation
 
-### Transition-property
+### Transition
 
-Sets the CSS properties affected by transition animations.
+To set the CSS properties affected by transition animations, the `transition` property is typed directly and can be followed by the property to which you want to apply it.
 
-- `transition`
+```CSS
+/* This CSS applies to all */
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+```
 
-  ```CSS
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
+```HTML
+<div class="transition"></div> <!-- CSS: transition-property: various properties...; -->
+```
 
-- `transition-none`
+- Properties: `none`, `all`, `colors`, `opacity`, `shadow`, `transform`
 
-  ```CSS
-  transition-property: none;
-  ```
-
-- `transition-all`
-
-  ```CSS
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
-
-- `transition-colors`
-
-  ```CSS
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
-
-- `transition-opacity`
-
-  ```CSS
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
-
-- `transition-shadow`
-
-  ```CSS
-  transition-property: box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
-
-- `transition-transform`
-
-  ```CSS
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  ```
+```HTML
+<div class="transition-colors"></div> <!-- CSS: transition-property: background-color, border-color, color, fill, stroke; -->
+```
 
 ### Transition-duration
 
-Sets the length of time for a transition animations to complete. `duration-{type}`
+To set the duration of the transitions, the `duration` property is written directly followed by the time in ms.
 
-| Type  | CSS                         |
-| ----- | --------------------------- |
-| `75`  | transition-duration: 75ms;  |
-| `100` | transition-duration: 100ms; |
-| `150` | transition-duration: 150ms; |
-| `200` | transition-duration: 200ms; |
-| `300` | transition-duration: 300ms; |
-| `...` | transition-duration: ...ms; |
+```HTML
+<div class="duration-200"></div> <!-- CSS: transition-duration: 200ms; -->
+```
 
 ### Transition-timing-function
 
@@ -803,18 +594,13 @@ Sets the easing function of transition animations.
 | `ease-out`    | transition-timing-function: cubic-bezier(0, 0, 0.2, 1);   |
 | `ease-in-out` | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
 
-### Transition-delay
+### Delay
 
-Sets the delay for transitions. `delay-{time}`
+To set the delay of the transitions, the `delay` property is written directly followed by the time in ms.
 
-| Time  | CSS                      |
-| ----- | ------------------------ |
-| `75`  | transition-delay: 75ms;  |
-| `100` | transition-delay: 100ms; |
-| `150` | transition-delay: 150ms; |
-| `200` | transition-delay: 200ms; |
-| `300` | transition-delay: 300ms; |
-| `...` | transition-delay: ...ms; |
+```HTML
+<div class="daley-150"></div> <!-- CSS: transition-delay: 150ms; -->
+```
 
 ### Animation
 
@@ -832,102 +618,46 @@ Sets CSS animations. `animate-{type}`
 
 ### Scale
 
-Scales an element that has transform applied.
+To set the scale of an element, the `scale` property is typed directly followed by a number.
 
-| Class         | CSS                                   |
-| ------------- | ------------------------------------- |
-| `scale-0`     | --tw-scale-x: 0; --tw-scale-y: 0;     |
-| `scale-50`    | --tw-scale-x: .5; --tw-scale-y: .5;   |
-| `scale-75`    | --tw-scale-x: .75; --tw-scale-y: .75; |
-| `scale-90`    | --tw-scale-x: .9; --tw-scale-y: .9;   |
-| `scale-100`   | --tw-scale-x: 1; --tw-scale-y: 1;     |
-| `scale-x-...` | --tw-scale-x: ...;                    |
-| `scale-y-...` | --tw-scale-y: ...;                    |
+```HTML
+<div class="scale-90"></div> <!-- CSS: --tw-scale-x: .9; --tw-scale-y: .9; -->
+```
+
+You can also set both vertical and horizontal scaling.
+
+```HTML
+<div class="scale-x-100"></div> <!-- CSS: --tw-scale-x: 1; -->
+<div class="scale-y-50"></div> <!-- CSS: --tw-scale-y:.5; -->
+```
 
 ### Rotate
 
-Rotates an element that has transform applied.
+To apply the rotation, type directly the property `rotate` followed by a number that will be the degree of rotation.
 
-| Class         | CSS                   |
-| ------------- | --------------------- |
-| `rotate-0`    | --tw-rotate: 0deg;    |
-| `rotate-1`    | --tw-rotate: 1deg;    |
-| `rotate-2`    | --tw-rotate: 2deg;    |
-| `rotate-3`    | --tw-rotate: 3deg;    |
-| `rotate-...`  | --tw-rotate: ...deg;  |
-| `-rotate-...` | --tw-rotate: -...deg; |
+```HTML
+<div class="rotate-10"></div> <!-- CSS: --tw-rotate: 10deg; -->
+<div class="-rotate-100"></div> <!-- CSS: --tw-rotate: -100deg; -->
+```
 
 ### Translate
 
-Translates an element that has transform applied.
+With the translate property you can move the element vertically and horizontally, for this you type directly the `translate` property followed by orientation and followed by [size](#size).
 
-| Class              | CSS                        |
-| ------------------ | -------------------------- |
-| `translate-x-0`    | --tw-translate-x: 0px;     |
-| `translate-x-1`    | --tw-translate-x: 0.25rem; |
-| `translate-x-2`    | --tw-translate-x: 0.5rem;  |
-| `translate-x-...`  | --tw-translate-x: ...rem;  |
-| `-translate-x-...` | --tw-translate-x: -...rem; |
-| `translate-y-0`    | --tw-translate-y: 0px;     |
-| `translate-y-1`    | --tw-translate-y: 0.25rem; |
-| `translate-y-2`    | --tw-translate-y: 0.5rem;  |
-| `translate-y-...`  | --tw-translate-y: ...rem;  |
-| `-translate-y-...` | --tw-translate-y: -...rem; |
-
-### Transform
-
-Sets the transform of an element.
-
-- `transform`
-
-  ```CSS
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  ```
-
-- `transform-gpu`
-
-  ```CSS
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  .transform-none
-  transform: none;
-  ```
-
-- `transform-none`
-
-  ```CSS
-  transform: none;
-  ```
+```HTML
+<div class="translate-x-4"></div> <!-- CSS: --tw-translate-x: 1rem; -->
+<div class="translate-y-2"></div> <!-- CSS: --tw-translate-y: 0.5rem; -->
+```
 
 ## Interactivity
 
 ### Cursor
 
-Changes the cursor when hovering over an element.
+To set the cursor on the element, the CSS property is written directly followed by the value of the `cursor-auto` property.
 
-| Class                | CSS                  |
-| -------------------- | -------------------- |
-| `cursor-auto`        | cursor: auto;        |
-| `cursor-default`     | cursor: default;     |
-| `cursor-pointer`     | cursor: pointer;     |
-| `cursor-wait`        | cursor: wait;        |
-| `cursor-text`        | cursor: text;        |
-| `cursor-move`        | cursor: move;        |
-| `cursor-help`        | cursor: help;        |
-| `cursor-not-allowed` | cursor: not-allowed; |
+```HTML
+<div class="cursor-pointer"></div> <!-- CSS: cursor: pointer; -->
+```
 
 ### Outline
 
@@ -940,15 +670,6 @@ Sets the outline of the element.
 | `outline-black` | outline: 2px dotted black; outline-offset: 2px;      |
 
 ## Filter
-
-### filter
-
-Sets filter on elements.
-
-| Class         | CSS                                                                                                                                                                                |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `filter`      | filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow); |
-| `filter-none` | filter: none;                                                                                                                                                                      |
 
 ### Blur
 
@@ -968,46 +689,43 @@ Sets blur filter on elements (use with filter utility).
 
 ### Drop-shadow
 
-Sets drop-shadow filter on elements (use with filter utility).
+To set the drop-shadow filter on the element you directly type the CSS property followed by the size you want to set `drop-shadow-sm`.
 
-| Class              | CSS                                                                                                        |
-| ------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `drop-shadow-sm`   | --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));                                                 |
-| `drop-shadow`      | --tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));    |
-| `drop-shadow-md`   | --tw-drop-shadow: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));   |
-| `drop-shadow-lg`   | --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));   |
-| `drop-shadow-xl`   | --tw-drop-shadow: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08)); |
-| `drop-shadow-2xl`  | --tw-drop-shadow: drop-shadow(0 25px 25px hsla(0, 0.00%, 0.00%, 0.15));                                    |
-| `drop-shadow-none` | --tw-drop-shadow: drop-shadow(0 0 #0000);                                                                  |
+- `sm`, `md` , `lg`, `xl`, `2xl`, `none`
+
+```HTML
+<div class="drop-shadow"></div>
+```
+
+```CSS
+--tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+```
 
 ## Effects
 
 ### Box-shadow
 
-Sets the shadow around an element.
+To set the shadow around an element you directly type the CSS property followed by the size you want to set `shadow-sm`.
 
-| Class          | CSS                                                                                                                                                                                             |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `shadow-sm`    | --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                          |
-| `shadow`       | --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);          |
-| `shadow-md`    | --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);    |
-| `shadow-lg`    | --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);  |
-| `shadow-xl`    | -tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); |
-| `shadow-2xl`   | --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                    |
-| `shadow-inner` | --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                    |
-| `shadow-none`  | --tw-shadow: 0 0 #0000; box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);                                                                |
+- `sm`, `md`, `lg`, `xl`, `2xl`, `inner`, `none`.
+
+```HTML
+<div class="shadow"></div>
+```
+
+```CSS
+--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+```
 
 ### Opacity
 
-Sets the transparency of an element.
+To set the transparency of an element, the CSS property is typed directly followed by an `opacity-10` number.
 
-| Class         | CSS            |
-| ------------- | -------------- |
-| `opacity-0`   | opacity: 0;    |
-| `opacity-5`   | opacity: 0.05; |
-| `opacity-10`  | opacity: 0.1;  |
-| `opacity-20`  | opacity: 0.2;  |
-| `opacity-...` | opacity: ...;  |
-| `opacity-100` | opacity: 1;    |
+```HTML
+<div class="opacity-0"></div> <!-- CSS: opacity: 0; -->
+<div class="opacity-100"></div> <!-- CSS: opacity: 1; -->
+```
 
 [🡨 Back](../README.md)
