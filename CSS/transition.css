@@ -1,0 +1,38 @@
+.element {
+  /* the properties to be set as value are written the same. */
+  transition-property: all; /* default */
+  transition-property: scale;
+  transition-property: color;
+  transition-property: background;
+
+  /* Values can be in seconds or milliseconds in transition-duration. */
+  transition-duration: 0; /* default */
+  transition-duration: 2000ms;
+  transition-duration: 2s;
+
+  /* Keyword values in transition-timing-function */
+  transition-timing-function: ease; /* default */
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-out;
+  transition-timing-function: linear;
+  /* Function values in transition-timing-function */
+  transition-timing-function: steps();
+  transition-timing-function: cubic-bezier();
+
+  /* Values can be in seconds or milliseconds in transition-delay. */
+  transition-delay: 0; /* default */
+  transition-delay: 1000ms;
+  transition-delay: 1s;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background-color: #09f;
+  transition: background 0.5s ease-out;
+}
+
+.element:hover {
+  background-color: #9f0;
+}
