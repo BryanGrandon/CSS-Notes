@@ -2,6 +2,8 @@
 
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
+<!-- restructure the content of the notes, so that the content deals with what is most important before making a mini guide to the language that there are already many. -->
+
 - [CSS Architecture](/docs/css-architecture.md)
 - [Sass](/docs/sass.md)
 - [Tailwind CSS](/docs/tailwind-css.md)
@@ -21,24 +23,91 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Flex](#flex)
 - [Variables](#variables)
 
-## [Selector](/code/selector.css)
+## Selector
 
 Selectors define on which elements a set of CSS rules will be applied.
 
-- `Universal` selector allows you to select all HTML elements
-- `Type` selector allows you to select the HTML tag itself.
-- `Class` selector allows you to select all the elements that have the same name in the class attribute.
-- `Id` selector allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.
-- `Attribute` selector allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
+- ### Universal
+
+  The universal selector allows you to select all elements that are in the HTML.
+
+  ```css
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  ```
+
+  See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
+
+- ### Type
+
+  The type selector is the one that allows you to select a specific HTML tag.
+
+  ```CSS
+  /* HTML: <p></p> */
+  p {
+    line-height: 1.2;
+  }
+  ```
+
+  See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
+
+- ### Class
+
+  The class selector allows you to select all the elements that have the same name in the class attribute.
+
+  ```CSS
+  /* HTML: <h2 class="title"></h2>, <p class="title"></p> */
+  .title {
+    font-size: 3rem;
+  }
+  ```
+
+  See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/class)
+
+- ### ID
+
+  The ID selector allows you to select a specific HTML element, since the name assigned to the id attribute must be unique.s
+
+  ```CSS
+  /* HTML: <p id="red"></p> */
+  #red {
+    color: #f00;
+  }
+  ```
+
+  See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id)
+
+- ### Attribute
+
+  The attribute selector allow you to select all the elements that correspond to a specific attribute or to a defined attribute value.
+
+  ```CSS
+  /* <a> elements whose class attribute contains the word "logo" */
+  a[class~="logo"] {
+    padding: 2px;
+  }
+  ```
+
+  See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ## [Pseudo-classes](/code/pseudo-classes.css)
 
 A CSS pseudo class is a keyword added to selectors that specifies a special state of the selected element.
 
-- `:hover` Allows you to apply a style when hovering over an element.
-- `:active` Allows to apply a style when the element is activated.
-- `:visited` Styles are applied once the link has been visited by the user.
-- `:link` The styles are applied to the link that has not yet been visited.
+```CSS
+.element:(pseudo-classes) {
+  color: #f00;
+}
+```
+
+| Pseudo-classes | Description                                                       |
+| -------------- | ----------------------------------------------------------------- |
+| `hover`        | Allows you to apply a style when hovering over an element.        |
+| `active`       | Allows to apply a style when the element is activated.            |
+| `visited`      | Styles are applied once the link has been visited by the user.    |
+| `link`         | The styles are applied to the link that has not yet been visited. |
 
 See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
@@ -46,12 +115,20 @@ See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseu
 
 Pseudo-elements are added to the selectors, but they do not describe a special state, but allow you to add styles to a specific part of the document.
 
-- `::after` allows us to add a cosmetic content after the element using the `content` property.
-- `::before` allows us to add a cosmetic content before the element using the `content` property.
-- `::first-letter` Applies styles to the first letter of the content.
-- `::first-line` Apply styles to the first line of content.
-- `::selection` Applies styles to the part of a document that has been highlighted by the user.
-- `::placeholder` represents the temporary text in an `<input>` element or a `<textarea>` element.
+```CSS
+.element::(pseudo-element) {
+  color: #0f0;
+}
+```
+
+| Pseudo-element | Description                                                                          |
+| -------------- | ------------------------------------------------------------------------------------ |
+| `after`        | allows us to add a cosmetic content after the element using the `content` property.  |
+| `before`       | allows us to add a cosmetic content before the element using the `content` property. |
+| `first-letter` | Applies styles to the first letter of the content.                                   |
+| `first-line`   | Apply styles to the first line of content.                                           |
+| `selection`    | Applies styles to the part of a document that has been highlighted by the user.      |
+| `placeholder`  | represents the temporary text in an `<input>` element or a `<textarea>` element.     |
 
 See more in [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
