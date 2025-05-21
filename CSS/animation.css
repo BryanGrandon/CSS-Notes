@@ -1,0 +1,54 @@
+.element {
+  /* Name of the animation to be applied. */
+  animation-name: change-color;
+
+  /* Animation duration. */
+  animation-duration: 2000ms;
+  animation-duration: 2s;
+
+  /* Pace of the animation. */
+  animation-timing-function: ease;
+  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
+  animation-timing-function: linear;
+  animation-timing-function: steps();
+  animation-timing-function: cubic-bezier();
+
+  /* Delay in starting the animation.  */
+  animation-delay: 1000ms;
+  animation-delay: 1s;
+
+  /* Number of times to be repeated. */
+  animation-iteration-count: 1;
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+
+  /* Animation direction */
+  animation-direction: normal;
+  animation-direction: reverse;
+  animation-direction: alternate;
+  animation-direction: alternate-reverse;
+
+  /* How the animation is “completed”. */
+  animation-fill-mode: none;
+  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
+  animation-fill-mode: both;
+}
+
+@keyframes change-color {
+  0% {
+    background: red;
+  }
+  50% {
+    background: blue;
+  }
+  100% {
+    background: green;
+  }
+}
+
+.element {
+  animation: change-color 5s linear 0.5s 4 normal both;
+}

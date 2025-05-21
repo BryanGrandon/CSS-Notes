@@ -26,46 +26,32 @@ Custom properties (sometimes referred to as CSS variables or cascading variables
 
 ## Animations
 
-Animations are small changes in the content or visual aspect of a page, so that it is more user-friendly to view. They can be simple, such as changing the color or size of an image, as well as more complex animations, such as transformations or specific movements.
+Animations are small changes to the content or visual appearance of a page to make it more comfortable for the user to view.
 
 ### [Transition](/CSS/transition.css)
 
 A transition is a very simple type of animation between two different states. This type of animation is generally produced by a user interaction with the website or an element of the website, in order to smooth the change of state.
 
-| CSS property                 | Description                                                    |
-| ---------------------------- | -------------------------------------------------------------- |
-| `transition-property`        | CSS properties to which a transition effect should be applied. |
-| `transition-duration`        | Time it will take for a transition animation to complete.      |
-| `transition-timing-function` | The type of speed the transition will have                     |
-| `transition-delay`           | Waiting time before starting the animation                     |
-
-The abbreviated property is `transition`.
-
-```CSS
+```SCSS
 /* transition: <property> <duration> <timing-function> <delay> */
+
 .element {
+    background: red;
     transition: background 1s ease-in;
+
+    &:hover {
+        background: green ;
+    }
 }
+
 ```
 
-### Animation
+### [Animation](/CSS/animation.css)
 
 Animations allow you to animate the transition between one CSS style and another. Animations consist of two components: a style describing the CSS animation and a set of frames indicating its initial and final state, as well as possible intermediate points in the animation.
 
-| Property                      | Description                          |
-| ----------------------------- | ------------------------------------ |
-| `animation-name`              | Name of the animation to be applied. |
-| `animation-duration`          | Animation duration.                  |
-| `animation-timing-function`   | Pace of the animation.               |
-| `animation-delay`             | Delay in starting the animation.     |
-| `animation-interaction-count` | Number of times to be repeated.      |
-| `animation-direction`         | Animation direction.                 |
-| `animation-fill-mode`         | How the animation is “completed”.    |
-
-The abbreviated property is `animation`.
-
 ```CSS
-  /* animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> */
+  /* animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode> */
 
   .element {
     animation: change-color 5s linear 0.5s 4 normal both;
@@ -76,13 +62,7 @@ To define the keyframes of the animation, we will use the `@keyframes` rule.
 
 ```CSS
 @keyframes change-color {
-    /* First key frame */
-    from {
-        background: red;
-    }
-    /* Second and last key frame */
-    to {
-        background: green;
-    }
+    from { background: red; } /* First key frame */
+    to { background: green; } /* Second and last key frame */
 }
 ```
