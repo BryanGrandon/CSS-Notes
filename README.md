@@ -10,6 +10,7 @@ CSS or **Cascading Style Sheets** is the language used to style the frontend of 
 - [Length](#length)
 - [Colors](#colors)
 - [Animations](#animations)
+- [Architecture](#architecture)
 
 ## Variables
 
@@ -120,3 +121,17 @@ To define the keyframes of the animation, we will use the `@keyframes` rule.
     to { background: green; } /* Second and last key frame */
 }
 ```
+
+## Architecture
+
+Consists of managing CSS code with a set of rules and patterns to facilitate its readability, maintainability and scalability.
+
+### Block Element Modifier (BEM)
+
+BEM is a CSS naming and code structure methodology that provides a way to write CSS class names.
+
+- The Block is the independent part in our HTML, it does not need other elements to exist.
+- An element will always be inside a block, because it is part of it and is dependent on it to exist.
+- Modifiers are used in elements or blocks to represent a different characteristic that the modifier or element will have.
+
+[Example](https://res.cloudinary.com/practicaldev/image/fetch/s--OkBgfgPx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/yc0hv58in4eyxjj7qlcg.png)
