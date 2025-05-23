@@ -1,0 +1,23 @@
+// Mixins
+
+@mixin max-width {
+  max-width: 1400px;
+  margin: auto;
+}
+
+main {
+  @include max-width;
+}
+
+// Mixin with parameters
+
+@mixin flexBox($direction, $wrap, $just, $align) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $just;
+  align-items: $align;
+}
+
+.box {
+  @include flexBox(row, wrap, center, center);
+}

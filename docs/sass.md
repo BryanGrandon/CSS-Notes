@@ -8,119 +8,48 @@ npm install -g sass -D
 
 ## Table of Content
 
-- [File extension](#file-extension)
 - [Variables](#variables)
-- [Nesting](#nesting)
 - [Mixins](#mixins)
 - [Modules](#modules)
 - [Folder structure](#folder-structure)
 
-## File extension
-
-Sass supports two different syntaxes. Each one can load the other, so it’s up to you and your team which one to choose.
-
-To use one or the other, you only have to change the extension of the file
-
-```scss
-// .sass
-.box
-  color : #f00
-```
-
-```scss
-// .scss
-.box {
-  color: #f00;
-}
-```
-
-## Variables
+## [Variables](/Sass/variables.scss)
 
 The way to declare a variable in sass is as
 follows. `$<variable>:<value>`
 
 ```scss
 $main: #ccc;
-
-body {
-  background: $main;
-}
 ```
 
 ### Array of variables
+
+It is a way of declaring multiple variables
 
 ```scss
 $colors: (
   'white': #fff,
   'purple': #770af4,
 );
-
-.header {
-  color: map-get($colors, 'purple');
-}
 ```
 
-## Nesting
+## [Mixins](/Sass/mixins.scss)
 
-Instead of repeating the same selectors over and over again, Sass allows you to write style rules inside another one.
-Since Sass will automatically combine the outer rule selector with the inner rule selector.
-
-```css
-h1 {
-  color: #f00;
-}
-
-h1 a {
-  color: #00f;
-}
-
-h1 a:hover {
-  color: #0f0;
-}
-```
-
-```scss
-h1 {
-  color: #f00;
-
-  a {
-    color: #00f;
-
-    &:hover {
-      color: #f0f;
-    }
-  }
-}
-```
-
-## Mixins
-
-A mixin is a “function” in the sense that it allows us to reuse code and that it accepts arguments, however, it is not a function as such (we can say this because in SASS there are also functions). The characteristic of mixins is that they define properties that are then included in a selector.
+A mixin is like a “function” in the sense that it allows us to reuse code and that it accepts arguments. The characteristic of mixins is that they define properties that are then included in a selector.
 
 ```scss
 @mixin name {
   property: value;
-  property: value;
   ...
-}
-
-a {
-  @include name();
 }
 ```
 
 ### Mixins with variables
 
 ```scss
-@mixin flexBox($direction, $wrap, $just, $align) {
-  display: flex;
-  flex-flow: $direction $wrap;
-  justify-content: $just;
-  align-items: $align;
-}
-
-.flex {
-  @include flexBox(column, wrap, space-evenly, center);
+@mixin max-width($width) {
+  max-width: $width;
+  margin: auto;
 }
 ```
 

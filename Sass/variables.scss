@@ -1,0 +1,18 @@
+// Variables
+
+$main: #ccc;
+
+main {
+  background-color: $main;
+}
+
+// Array of variables
+
+$colors: (
+  'white': #fff,
+  'purple': #770af4,
+);
+
+.header {
+  color: map-get($colors, 'purple');
+}

@@ -2,7 +2,9 @@
 
 CSS or **Cascading Style Sheets** is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
 
-- [Reset Styles](/CSS/reset-styles.css)
+[![CSS](https://img.shields.io/badge/Reset_Styles-1572B6?&style=flat&logo=css3&logoColor=white)](/CSS/reset-styles.css)
+[![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)](/docs/sass.md)
+[![Tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)](/docs/tailwind-css.md)
 
 ## Table of content
 
